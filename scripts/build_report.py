@@ -12,6 +12,8 @@ from reportlab.lib.utils import ImageReader
 
 ROOT = Path(__file__).resolve().parents[1]
 E = ROOT/'outputs/23L-0727_A2_Ops'
+if not E.exists():
+    E = ROOT/'submission/evidence'
 C = E/'colab'
 T = C/'training_cached'
 D = E/'data_evidence'
@@ -75,7 +77,7 @@ def build():
     heading('1.1 - Environment and GPU')
     para('The local project uses an isolated Python virtual environment, separating its dependencies from system Python. The graded model experiment ran in a separate Google Colab runtime with an NVIDIA T4 GPU. TensorFlow GPU detection and the runtime/package record are shown below; exact installed package versions are supplied in requirements-lock.txt.')
     table([['Setting','Observed value'],['Python',env['python'].split('\n')[0]],['TensorFlow / Keras',env['tensorflow']+' / '+env['keras']],['GPU devices',', '.join(env['gpu'])],['CUDA / cuDNN',str(env['build'].get('cuda_version'))+' / '+str(env['build'].get('cudnn_version'))],['Random seed / image size / batch','42 / 224 x 224 RGB / 32']],[135,358])
-    shot('environment.png','Actual Colab package versions and GPU evidence, with project context.',340)
+    shot('environment.png','Actual Colab package versions and GPU evidence, with project context.',312)
     para('<b>Commands and choices.</b> python -m venv creates isolation; pip installs the declared dependencies. TensorFlow list_physical_devices checks GPU visibility; pip freeze records exact versions. Keeping Colab\'s supplied TensorFlow/CUDA combination avoids replacing its working GPU stack.')
     para('<b>Observed issue.</b> Google Drive was full, preventing notebook saves. Training checkpoints and outputs were therefore written under /content/23L-0727_evidence and downloaded to the local submission bundle. Runtime-local files alone are not persistent backups.')
 
@@ -86,7 +88,7 @@ def build():
     para('There are 973 readable images and no unreadable candidates. One duplicate group contributes one extra file; decoded-pixel deduplication also removes one extra image. No cross-label pixel conflicts were found. AI images account for 55.3% of the original collection, so accuracy should be considered alongside precision, recall, F1, and ROC-AUC.')
     table([['Split','Real','AI','Total'],['Train','304','376','680'],['Validation','65','81','146'],['Test','66','80','146']],[123,123,123,124])
     para('Deduplication happens before a seeded, stratified 70/15/15 split. Split lists retain original paths and hashes, making membership auditable. The retained pixel-hash sets are disjoint across train/validation/test. This only detects identical images: near duplicates and shared web sources may still leak visual information.')
-    shot('audit.png','Executed audit and split evidence for the assignment dataset.',295)
+    shot('audit.png','Executed audit and split evidence for the assignment dataset.',270)
 
     page('1.3 - Visual EDA: sample grid and widths')
     image(D/'samples.png','Deterministic original-image samples from each class (seed 42).',235)
@@ -115,7 +117,9 @@ def build():
     para('The pointer contains the content checksum, byte size, file count, hash algorithm, and path. For a directory, its .dir object identifies the file manifest. The audit uses SHA-256 for source identity; DVC\'s content checksum serves its own storage protocol. Large images remain outside Git because binary versions inflate history and do not produce useful text diffs.')
     para('The raw DVC pointer counts 975 files, while the image audit counts 973 candidates: DVC also includes two hidden .DS_Store files ignored by the image audit. This difference does not indicate two unreadable images.')
     shot('dvc_dataset.png','Browser view of the actual saved raw pointer and freshly executed DVC remote status. The log file is included in the evidence bundle.',300)
-    shot('dagshub.png','DagsHub repository and published version history.',240)
+    page('1.4 - Published project and version history')
+    para('Screenshots are cropped browser captures that preserve the displayed evidence and project context while excluding the software cursor overlay. No reported values were edited. The GitHub project is mirrored to DagsHub under the required roll-number project name. The dvc-toy branch preserves both CSV versions, while main contains the audited dataset pointers and model development source. Figure '+str(fig+1)+' shows the published project; large data objects remain in the permitted local DVC remote.')
+    shot('dagshub.png','DagsHub project and source version evidence.',355)
     para('The local remote satisfies the permitted storage option. Reproducing on another computer requires access to that remote or an exported copy and an updated remote path; a Git clone alone cannot reconstruct excluded image bytes.')
 
     page('Task 2 - Model Development with TensorFlow/Keras')
@@ -131,7 +135,9 @@ def build():
     layers=rows(T/'baseline/layers.csv')
     table([['Layer','Output shape','Parameters']]+[[r['layer'],r['output_shape'],f"{int(r['parameters']):,}"] for r in layers if '/' not in r['layer']],[214,179,100],True)
     para('The loss is binary cross entropy because the target is binary and the output is a sigmoid. Adam starts at 0.001, providing adaptive updates. Training monitors binary accuracy, AUC, precision, and recall; the latter classification metrics use 0.5 during fit. Final metrics instead use thresholds chosen solely from validation. Sigmoid scores are not guaranteed calibrated authenticity probabilities.')
-    shot('model_summary.png','Executed scratch CNN model summary with output shapes and parameter counts.',250)
+    page('2.2 - Model summary evidence')
+    para('Figure '+str(fig+1)+' shows the actual layer evidence exported from the trained scratch model. Shapes follow the data flow in the preceding table: three pooling operations reduce 224 x 224 to 28 x 28, and global average pooling reduces each feature map to one channel value. The screenshot focuses on layers with parameters. Convolutional layers dominate this small network; augmentation and pooling have no learned parameters.')
+    shot('model_summary.png','Executed weighted-layer excerpt of the scratch CNN, with output shapes and parameter counts.',380)
 
     page('2.3 - Transfer learning in two stages')
     para('MobileNetV2 uses ImageNet pretrained weights with include_top=False. The added classifier consists of global average pooling, dropout 0.3, and one sigmoid. Embedded rescaling maps 0-255 pixels to [-1,1], matching MobileNetV2 preprocessing. ImageNet features provide a useful initialization, while the authenticity task differs from the original object classification task.')
@@ -158,7 +164,9 @@ def build():
         para(f"<b>{m}:</b> {v['fp']} of 66 real images were called AI, and {v['fn']} of 80 AI images were missed. Precision measures correctness of AI accusations; recall measures the fraction of AI images caught. ROC-AUC uses continuous scores and does not depend on the selected threshold.")
     para(links['evaluation_interpretation'])
     para('The 146-image test set is small and comes from the same collection as training. These are point estimates without a new-source or new-generator guarantee. Source artifacts, label uncertainty, compression, and unseen generators limit generalization; the detector should support review rather than establish authenticity.')
-    shot('evaluation.png','Executed test metric comparison with the project context.',260)
+    page('2.5 - Executed metric evidence')
+    para('Figure '+str(fig+1)+' records the final saved test results in the actual Colab notebook. The report tables use the unrounded JSON values, whereas this compact display rounds to four decimal places. Confusion-matrix counts preserve the exact errors behind precision and recall; all values refer to the same 146 held-out images.')
+    shot('evaluation.png','Executed test metric comparison with the project context.',355)
 
     page('2.5 - Confusion matrices and ROC curves')
     for m in ['baseline','transfer']:
@@ -170,7 +178,7 @@ def build():
         para(m+': confusion matrix (rows=true, columns=prediction) and held-out ROC curve.','CaptionVG')
     para('Each final model predicts the test set exactly once. Probabilities, row-level predictions, and labels are saved, and the confusion matrix, ROC, metrics, and error grids are derived from that same pass. Accuracy is (TP+TN)/N; precision=TP/(TP+FP); recall=TP/(TP+FN); F1 is their harmonic mean. No model was retrained after the held-out metrics were exposed.')
 
-    for m in ['baseline','transfer']:
+    for m in ['transfer']:
         page('2.6 - Error analysis: '+m)
         image(T/f'evaluation/{m}/misclassified.png',f'First ten available {m} errors in manifest order; true and predicted labels and AI scores are shown.',235)
         errs=rows(T/f'evaluation/{m}/error_analysis.csv')
@@ -194,13 +202,15 @@ def build():
     table([['Trial','Status','LR','Dropout','Unfrozen','Val loss']]+[[r['trial_id'],r['status'],r['learning_rate'],r['dropout'],r['unfrozen_layers'],f"{float(r['val_loss']):.5f}"] for r in trials],[40,100,80,75,75,123],True)
     best=js(T/'tuner/best_hyperparameters.json')
     para('Best applied settings: <b>'+escape(str(best))+'</b>. The actual winning checkpoint is retained; the final transfer candidate is selected against the head and standalone fine-tune candidates using validation loss.')
+    page('2.7 - Applied tuner evidence and interpretation')
+    para('Figure '+str(fig+1)+' confirms that all eight applied random-search trials completed and records the winning settings. Trial IDs are zero-based, so winning trial 4 is the fifth trial. These are validation results; test data did not choose the hyperparameters.')
+    shot('tuner_applied.png','Eight completed applied trials and winning settings.',310)
     ranges=js(T/'tuner/descriptive_effect_ranges.json')
     winner=max(ranges,key=ranges.get)
     table([['Parameter','Range of marginal mean validation losses']]+[[k,f'{v:.6f}'] for k,v in ranges.items()],[180,313])
     para('<b>'+winner+'</b> has the widest observed marginal mean-loss range, and thus the strongest exploratory association in these trials. This is not causal importance: multiple settings change together, each value has few observations, and optimization is stochastic. A controlled one-factor comparison would be needed to isolate effects.')
     para('The marginal mean validation loss was 0.52172 at 1e-5 (2 trials), 0.51140 at 3e-5 (3), and 0.48805 at 1e-4 (3). Larger updates may have adapted the pretrained final layers faster within the short five-epoch budget. This is a hypothesis about the observed association, not proof that 1e-4 is universally best.')
     para('Choosing the minimum of many validation scores can select random favorable noise and overfit the validation split. The test set is consequently opened only after candidate and threshold selection. Further model changes after this report would require a fresh held-out set for an unbiased final check.')
-    shot('tuner_applied.png','Eight completed applied trials and winning settings.',240)
 
     page('Reproduction, troubleshooting, and references')
     para('The source repository contains the audit, pipeline/models, tuning, threshold/evaluation code, and standalone notebook. The evidence bundle includes the exact environment, split manifests, source hashes, curves, checkpoints, tuner state, and saved predictions. The report builder reads these outputs and refuses to build without COMPLETE.json and at least eight completed applied trials.')

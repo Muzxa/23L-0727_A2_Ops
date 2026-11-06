@@ -19,3 +19,6 @@ dvc_remote/
 visionguard_tasks_1_2.zip
 
 .DS_Store
+
+# Local submission archive
+submission/*.zip

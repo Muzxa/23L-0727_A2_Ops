@@ -1,0 +1,96 @@
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid init -b main
+Initialized empty Git repository in /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/dvc_toy/repo/.git/
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc init
+Initialized DVC repository.
+
+You can now commit the changes to git.
+
+What's next?
+------------
+- Check out the documentation: <https://dvc.org/doc>
+- Get help and share ideas: <https://dvc.org/chat>
+- Star us on GitHub: <https://github.com/treeverse/dvc>
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc remote add -d local /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/dvc_toy/remote
+Setting 'local' as a default remote.
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc add tiny.csv
+
+To track the changes with git, run:
+
+	git add .gitignore tiny.csv.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid add .dvc .dvcignore .gitignore tiny.csv.dvc
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid commit -m Version 1: two labeled rows
+[main (root-commit) edae205] Version 1: two labeled rows
+ 5 files changed, 16 insertions(+)
+ create mode 100644 .dvc/.gitignore
+ create mode 100644 .dvc/config
+ create mode 100644 .dvcignore
+ create mode 100644 .gitignore
+ create mode 100644 tiny.csv.dvc
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid rev-parse HEAD
+edae2050b580c170042a20a80adb59d536f783b5
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc push
+1 file pushed
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc add tiny.csv
+
+To track the changes with git, run:
+
+	git add tiny.csv.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid add tiny.csv.dvc
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid commit -m Version 2: add third row
+[main 911bc3f] Version 2: add third row
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid rev-parse HEAD
+911bc3f41a0ea52a11ea3490bd8f8f18f3f653fa
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc push
+1 file pushed
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid log --oneline --all
+911bc3f Version 2: add third row
+edae205 Version 1: two labeled rows
+
+$ git -c user.name=VisionGuard Toy Demo -c user.email=visionguard-demo@example.invalid checkout edae2050b580c170042a20a80adb59d536f783b5
+Note: switching to 'edae2050b580c170042a20a80adb59d536f783b5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at edae205 Version 1: two labeled rows
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc checkout
+M       tiny.csv
+
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc pull
+A       tiny.csv
+1 file fetched and 1 file added
