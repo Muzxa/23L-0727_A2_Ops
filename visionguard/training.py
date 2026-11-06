@@ -41,8 +41,6 @@ def dataset(split_csv, root, size=224, batch=32, training=False, seed=42):
     frame = pd.read_csv(split_csv)
     paths = [str(Path(root) / p) for p in frame.path]
     ds = tf.data.Dataset.from_tensor_slices((paths, frame.label.to_numpy(np.float32)))
-    if training:
-        ds = ds.shuffle(len(frame), seed=seed, reshuffle_each_iteration=True)
     def decode(path, label):
         im = tf.io.decode_png(tf.io.read_file(path), channels=3)
         # Letterboxing preserves aspect ratio. Padding is zero; no geometric distortion.
@@ -50,7 +48,13 @@ def dataset(split_csv, root, size=224, batch=32, training=False, seed=42):
         return im, tf.reshape(label, [1])
     opts = tf.data.Options()
     opts.experimental_deterministic = True
-    return ds.map(decode, num_parallel_calls=tf.data.AUTOTUNE).with_options(opts).batch(batch).prefetch(tf.data.AUTOTUNE)
+    # Cache deterministic resized pixels, then reshuffle each training epoch.
+    # The assignment's 680 training images occupy about 410 MB at 224px.
+    # Augmentation stays inside the model and is never cached.
+    ds = ds.map(decode, num_parallel_calls=2).with_options(opts).cache()
+    if training:
+        ds = ds.shuffle(len(frame), seed=seed, reshuffle_each_iteration=True)
+    return ds.batch(batch).prefetch(1)
 
 
 def augmentation(seed=42):
