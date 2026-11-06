@@ -1,0 +1,4 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/versioned_storage/dvc_remote
