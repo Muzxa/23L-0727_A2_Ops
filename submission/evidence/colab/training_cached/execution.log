@@ -1,0 +1,2015 @@
+{
+  "timestamp_utc": "2026-11-06T14:13:10.727299+00:00",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "tensorflow": "2.21.0",
+  "keras": "3.13.2",
+  "gpu": [
+    "/physical_device:GPU:0"
+  ],
+  "build": {
+    "cpu_compiler": "clang",
+    "cuda_compute_capabilities": [
+      "sm_60",
+      "sm_70",
+      "sm_80",
+      "sm_89",
+      "compute_90"
+    ],
+    "cuda_version": "12.5.1",
+    "cudnn_version": "9",
+    "is_cuda_build": true,
+    "is_rocm_build": false,
+    "is_tensorrt_build": false
+  },
+  "platform": "linux"
+}
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1793974392.053688   24386 gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was false.
+W0000 00:00:1793974395.691745   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974396.272445   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974397.025578   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974397.139865   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974397.303211   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974397.856829   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974397.952249   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974398.928119   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974399.209115   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974399.264758   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974400.076811   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974400.354206   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974400.901946   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974401.044639   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974401.424132   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974402.131579   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974402.342363   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974402.725110   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974403.364988   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974403.983370   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974404.005408   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974404.529579   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974405.300667   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974405.592479   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974406.273382   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974406.962251   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974407.191359   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974409.708310   24470 png_io.cc:96] PNG warning: iCCP: profile 'ICC Profile': 1000000h: invalid rendering intent
+W0000 00:00:1793974409.731482   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.143365   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.417091   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.418326   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.515502   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.698539   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.744481   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974410.785205   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974411.200399   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974411.323874   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974411.822661   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974411.904119   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974412.355124   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974412.495980   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974414.479870   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974415.450364   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974415.475600   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974416.162102   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974416.895441   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974417.525564   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974417.962061   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974418.202078   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974418.436890   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974418.517793   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974418.554919   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974418.926324   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974419.062074   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974419.710069   24470 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974420.081039   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974423.652973   24469 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+Model: "scratch_cnn"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ rgb_pixels_0_255 (InputLayer)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ train_only_augmentation         │ (None, 224, 224, 3)    │             0 │
+│ (Sequential)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_flip_1 (RandomFlip) │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_rotation_1          │ (None, 224, 224, 3)    │             0 │
+│ (RandomRotation)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_zoom_1 (RandomZoom) │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_contrast_1          │ (None, 224, 224, 3)    │             0 │
+│ (RandomContrast)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ scale_0_1 (Rescaling)           │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv_1 (Conv2D)                 │ (None, 224, 224, 32)   │           864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ bn_1 (BatchNormalization)       │ (None, 224, 224, 32)   │           128 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ relu_1 (Activation)             │ (None, 224, 224, 32)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ pool_1 (MaxPooling2D)           │ (None, 112, 112, 32)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv_2 (Conv2D)                 │ (None, 112, 112, 64)   │        18,432 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ bn_2 (BatchNormalization)       │ (None, 112, 112, 64)   │           256 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ relu_2 (Activation)             │ (None, 112, 112, 64)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ pool_2 (MaxPooling2D)           │ (None, 56, 56, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv_3 (Conv2D)                 │ (None, 56, 56, 128)    │        73,728 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ bn_3 (BatchNormalization)       │ (None, 56, 56, 128)    │           512 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ relu_3 (Activation)             │ (None, 56, 56, 128)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ pool_3 (MaxPooling2D)           │ (None, 28, 28, 128)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling2d        │ (None, 128)            │             0 │
+│ (GlobalAveragePooling2D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │         8,256 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ p_ai (Dense)                    │ (None, 1)              │            65 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 102,241 (399.38 KB)
+ Trainable params: 101,793 (397.63 KB)
+ Non-trainable params: 448 (1.75 KB)
+
+Epoch 1/20
+W0000 00:00:1793974451.273847   24845 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974454.113878   24844 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974454.200777   24844 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974454.418777   24844 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974454.811146   24844 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974455.256437   24845 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974455.477790   24845 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974455.862679   24844 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+22/22 - 15s - 667ms/step - accuracy: 0.5956 - auc: 0.6203 - loss: 0.6968 - precision: 0.6172 - recall: 0.7074 - val_accuracy: 0.5548 - val_auc: 0.5346 - val_loss: 0.6931 - val_precision: 0.6250 - val_recall: 0.4938 - learning_rate: 0.0010
+Epoch 2/20
+22/22 - 11s - 522ms/step - accuracy: 0.6221 - auc: 0.6733 - loss: 0.6428 - precision: 0.6578 - recall: 0.6596 - val_accuracy: 0.4863 - val_auc: 0.5429 - val_loss: 0.6901 - val_precision: 0.5349 - val_recall: 0.5679 - learning_rate: 0.0010
+Epoch 3/20
+22/22 - 3s - 137ms/step - accuracy: 0.6397 - auc: 0.6981 - loss: 0.6301 - precision: 0.6421 - recall: 0.7872 - val_accuracy: 0.5479 - val_auc: 0.5942 - val_loss: 0.6837 - val_precision: 0.5610 - val_recall: 0.8519 - learning_rate: 0.0010
+Epoch 4/20
+22/22 - 3s - 140ms/step - accuracy: 0.6559 - auc: 0.6854 - loss: 0.6378 - precision: 0.6972 - recall: 0.6676 - val_accuracy: 0.5548 - val_auc: 0.6411 - val_loss: 0.6770 - val_precision: 0.5588 - val_recall: 0.9383 - learning_rate: 0.0010
+Epoch 5/20
+22/22 - 3s - 140ms/step - accuracy: 0.6456 - auc: 0.7063 - loss: 0.6198 - precision: 0.6718 - recall: 0.7021 - val_accuracy: 0.5753 - val_auc: 0.6403 - val_loss: 0.6712 - val_precision: 0.5826 - val_recall: 0.8272 - learning_rate: 0.0010
+Epoch 6/20
+22/22 - 3s - 144ms/step - accuracy: 0.6456 - auc: 0.6759 - loss: 0.6457 - precision: 0.6667 - recall: 0.7181 - val_accuracy: 0.5685 - val_auc: 0.6929 - val_loss: 0.6688 - val_precision: 0.5625 - val_recall: 1.0000 - learning_rate: 0.0010
+Epoch 7/20
+22/22 - 5s - 223ms/step - accuracy: 0.6515 - auc: 0.7157 - loss: 0.6192 - precision: 0.6708 - recall: 0.7261 - val_accuracy: 0.5548 - val_auc: 0.6961 - val_loss: 0.6870 - val_precision: 0.5548 - val_recall: 1.0000 - learning_rate: 0.0010
+Epoch 8/20
+22/22 - 3s - 133ms/step - accuracy: 0.6500 - auc: 0.7090 - loss: 0.6160 - precision: 0.6651 - recall: 0.7394 - val_accuracy: 0.5548 - val_auc: 0.7219 - val_loss: 0.6733 - val_precision: 0.5548 - val_recall: 1.0000 - learning_rate: 0.0010
+Epoch 9/20
+22/22 - 3s - 138ms/step - accuracy: 0.6853 - auc: 0.7360 - loss: 0.6064 - precision: 0.6910 - recall: 0.7793 - val_accuracy: 0.5616 - val_auc: 0.7242 - val_loss: 0.6862 - val_precision: 0.5586 - val_recall: 1.0000 - learning_rate: 5.0000e-04
+Epoch 10/20
+22/22 - 3s - 135ms/step - accuracy: 0.6824 - auc: 0.7498 - loss: 0.5909 - precision: 0.6905 - recall: 0.7713 - val_accuracy: 0.5548 - val_auc: 0.7349 - val_loss: 0.7440 - val_precision: 0.5548 - val_recall: 1.0000 - learning_rate: 5.0000e-04
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v2/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5
+
+[1m      0/9406464[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step
+[1m9406464/9406464[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+Model: "mobilenetv2_classifier"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ rgb_pixels_0_255 (InputLayer)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ train_only_augmentation         │ (None, 224, 224, 3)    │             0 │
+│ (Sequential)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_flip (RandomFlip)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_rotation            │ (None, 224, 224, 3)    │             0 │
+│ (RandomRotation)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_zoom (RandomZoom)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_contrast            │ (None, 224, 224, 3)    │             0 │
+│ (RandomContrast)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenet_preprocess            │ (None, 224, 224, 3)    │             0 │
+│ (Rescaling)                     │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenetv2_1.00_224            │ (None, 7, 7, 1280)     │     2,257,984 │
+│ (Functional)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ input_layer_1 (InputLayer) │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1 (Conv2D)             │ (None, 112, 112, 32)   │           864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ bn_Conv1                   │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1_relu (ReLU)          │ (None, 112, 112, 32)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise    │ (None, 112, 112, 32)   │           288 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise_BN │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └                            │ (None, 112, 112, 32)   │             0 │
+│ expanded_conv_depthwise_relu    │                        │               │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project      │ (None, 112, 112, 16)   │           512 │
+│ (Conv2D)                        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project_BN   │ (None, 112, 112, 16)   │            64 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand (Conv2D)    │ (None, 112, 112, 96)   │         1,536 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_BN          │ (None, 112, 112, 96)   │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_relu (ReLU) │ (None, 112, 112, 96)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_pad                │ (None, 113, 113, 96)   │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise          │ (None, 56, 56, 96)     │           864 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_BN       │ (None, 56, 56, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_relu     │ (None, 56, 56, 96)     │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project (Conv2D)   │ (None, 56, 56, 24)     │         2,304 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise          │ (None, 56, 56, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_BN       │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_relu     │ (None, 56, 56, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project (Conv2D)   │ (None, 56, 56, 24)     │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_add (Add)          │ (None, 56, 56, 24)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_pad                │ (None, 57, 57, 144)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise          │ (None, 28, 28, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_BN       │ (None, 28, 28, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_relu     │ (None, 28, 28, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project (Conv2D)   │ (None, 28, 28, 32)     │         4,608 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_pad                │ (None, 29, 29, 192)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise          │ (None, 14, 14, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_BN       │ (None, 14, 14, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_relu     │ (None, 14, 14, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project (Conv2D)   │ (None, 14, 14, 64)     │        12,288 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand (Conv2D)   │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_BN         │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_relu       │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise         │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_BN      │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_relu    │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project (Conv2D)  │ (None, 14, 14, 96)     │        36,864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_pad               │ (None, 15, 15, 576)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise         │ (None, 7, 7, 576)      │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_BN      │ (None, 7, 7, 576)      │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_relu    │ (None, 7, 7, 576)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project (Conv2D)  │ (None, 7, 7, 160)      │        92,160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project (Conv2D)  │ (None, 7, 7, 320)      │       307,200 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project_BN        │ (None, 7, 7, 320)      │         1,280 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1 (Conv2D)            │ (None, 7, 7, 1280)     │       409,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1_bn                  │ (None, 7, 7, 1280)     │         5,120 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ out_relu (ReLU)            │ (None, 7, 7, 1280)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling2d        │ (None, 1280)           │             0 │
+│ (GlobalAveragePooling2D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ head_dropout (Dropout)          │ (None, 1280)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ p_ai (Dense)                    │ (None, 1)              │         1,281 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 2,259,265 (8.62 MB)
+ Trainable params: 1,281 (5.00 KB)
+ Non-trainable params: 2,257,984 (8.61 MB)
+
+Epoch 1/10
+22/22 - 10s - 443ms/step - accuracy: 0.5706 - auc: 0.5767 - loss: 0.7733 - precision: 0.6045 - recall: 0.6463 - val_accuracy: 0.6096 - val_auc: 0.5805 - val_loss: 0.7190 - val_precision: 0.6091 - val_recall: 0.8272 - learning_rate: 0.0010
+Epoch 2/10
+22/22 - 3s - 124ms/step - accuracy: 0.6324 - auc: 0.6720 - loss: 0.6586 - precision: 0.6537 - recall: 0.7128 - val_accuracy: 0.6027 - val_auc: 0.6743 - val_loss: 0.6444 - val_precision: 0.6139 - val_recall: 0.7654 - learning_rate: 0.0010
+Epoch 3/10
+22/22 - 2s - 100ms/step - accuracy: 0.6941 - auc: 0.7694 - loss: 0.5710 - precision: 0.7000 - recall: 0.7819 - val_accuracy: 0.6781 - val_auc: 0.7181 - val_loss: 0.6124 - val_precision: 0.7297 - val_recall: 0.6667 - learning_rate: 0.0010
+Epoch 4/10
+22/22 - 2s - 100ms/step - accuracy: 0.7382 - auc: 0.7885 - loss: 0.5562 - precision: 0.7450 - recall: 0.8005 - val_accuracy: 0.6986 - val_auc: 0.7485 - val_loss: 0.5846 - val_precision: 0.7403 - val_recall: 0.7037 - learning_rate: 0.0010
+Epoch 5/10
+22/22 - 2s - 100ms/step - accuracy: 0.7603 - auc: 0.8248 - loss: 0.5167 - precision: 0.7855 - recall: 0.7793 - val_accuracy: 0.6918 - val_auc: 0.7741 - val_loss: 0.5702 - val_precision: 0.6800 - val_recall: 0.8395 - learning_rate: 0.0010
+Epoch 6/10
+22/22 - 2s - 74ms/step - accuracy: 0.7765 - auc: 0.8423 - loss: 0.4965 - precision: 0.7557 - recall: 0.8803 - val_accuracy: 0.6918 - val_auc: 0.7760 - val_loss: 0.5858 - val_precision: 0.7903 - val_recall: 0.6049 - learning_rate: 0.0010
+Epoch 7/10
+22/22 - 3s - 123ms/step - accuracy: 0.7618 - auc: 0.8440 - loss: 0.4908 - precision: 0.7846 - recall: 0.7846 - val_accuracy: 0.7260 - val_auc: 0.7901 - val_loss: 0.5522 - val_precision: 0.7662 - val_recall: 0.7284 - learning_rate: 0.0010
+Epoch 8/10
+22/22 - 3s - 118ms/step - accuracy: 0.8015 - auc: 0.8703 - loss: 0.4529 - precision: 0.8035 - recall: 0.8484 - val_accuracy: 0.7466 - val_auc: 0.7970 - val_loss: 0.5465 - val_precision: 0.7895 - val_recall: 0.7407 - learning_rate: 0.0010
+Epoch 9/10
+22/22 - 4s - 193ms/step - accuracy: 0.7897 - auc: 0.8549 - loss: 0.4745 - precision: 0.8042 - recall: 0.8191 - val_accuracy: 0.7397 - val_auc: 0.7958 - val_loss: 0.5612 - val_precision: 0.8209 - val_recall: 0.6790 - learning_rate: 0.0010
+Epoch 10/10
+22/22 - 2s - 101ms/step - accuracy: 0.8176 - auc: 0.8853 - loss: 0.4287 - precision: 0.8247 - recall: 0.8511 - val_accuracy: 0.7397 - val_auc: 0.8047 - val_loss: 0.5379 - val_precision: 0.7529 - val_recall: 0.7901 - learning_rate: 0.0010
+Model: "mobilenetv2_classifier"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ rgb_pixels_0_255 (InputLayer)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ train_only_augmentation         │ (None, 224, 224, 3)    │             0 │
+│ (Sequential)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_flip (RandomFlip)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_rotation            │ (None, 224, 224, 3)    │             0 │
+│ (RandomRotation)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_zoom (RandomZoom)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_contrast            │ (None, 224, 224, 3)    │             0 │
+│ (RandomContrast)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenet_preprocess            │ (None, 224, 224, 3)    │             0 │
+│ (Rescaling)                     │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenetv2_1.00_224            │ (None, 7, 7, 1280)     │     2,257,984 │
+│ (Functional)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ input_layer_1 (InputLayer) │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1 (Conv2D)             │ (None, 112, 112, 32)   │           864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ bn_Conv1                   │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1_relu (ReLU)          │ (None, 112, 112, 32)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise    │ (None, 112, 112, 32)   │           288 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise_BN │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └                            │ (None, 112, 112, 32)   │             0 │
+│ expanded_conv_depthwise_relu    │                        │               │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project      │ (None, 112, 112, 16)   │           512 │
+│ (Conv2D)                        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project_BN   │ (None, 112, 112, 16)   │            64 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand (Conv2D)    │ (None, 112, 112, 96)   │         1,536 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_BN          │ (None, 112, 112, 96)   │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_relu (ReLU) │ (None, 112, 112, 96)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_pad                │ (None, 113, 113, 96)   │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise          │ (None, 56, 56, 96)     │           864 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_BN       │ (None, 56, 56, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_relu     │ (None, 56, 56, 96)     │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project (Conv2D)   │ (None, 56, 56, 24)     │         2,304 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise          │ (None, 56, 56, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_BN       │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_relu     │ (None, 56, 56, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project (Conv2D)   │ (None, 56, 56, 24)     │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_add (Add)          │ (None, 56, 56, 24)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_pad                │ (None, 57, 57, 144)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise          │ (None, 28, 28, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_BN       │ (None, 28, 28, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_relu     │ (None, 28, 28, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project (Conv2D)   │ (None, 28, 28, 32)     │         4,608 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_pad                │ (None, 29, 29, 192)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise          │ (None, 14, 14, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_BN       │ (None, 14, 14, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_relu     │ (None, 14, 14, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project (Conv2D)   │ (None, 14, 14, 64)     │        12,288 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand (Conv2D)   │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_BN         │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_relu       │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise         │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_BN      │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_relu    │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project (Conv2D)  │ (None, 14, 14, 96)     │        36,864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_pad               │ (None, 15, 15, 576)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise         │ (None, 7, 7, 576)      │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_BN      │ (None, 7, 7, 576)      │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_relu    │ (None, 7, 7, 576)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project (Conv2D)  │ (None, 7, 7, 160)      │        92,160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project (Conv2D)  │ (None, 7, 7, 320)      │       307,200 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project_BN        │ (None, 7, 7, 320)      │         1,280 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1 (Conv2D)            │ (None, 7, 7, 1280)     │       409,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1_bn                  │ (None, 7, 7, 1280)     │         5,120 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ out_relu (ReLU)            │ (None, 7, 7, 1280)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling2d        │ (None, 1280)           │             0 │
+│ (GlobalAveragePooling2D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ head_dropout (Dropout)          │ (None, 1280)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ p_ai (Dense)                    │ (None, 1)              │         1,281 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 2,259,265 (8.62 MB)
+ Trainable params: 880,321 (3.36 MB)
+ Non-trainable params: 1,378,944 (5.26 MB)
+
+Epoch 1/15
+22/22 - 11s - 498ms/step - accuracy: 0.8235 - auc: 0.8995 - loss: 0.4053 - precision: 0.8351 - recall: 0.8484 - val_accuracy: 0.7397 - val_auc: 0.8104 - val_loss: 0.5304 - val_precision: 0.7792 - val_recall: 0.7407 - learning_rate: 1.0000e-05
+Epoch 2/15
+22/22 - 2s - 80ms/step - accuracy: 0.8206 - auc: 0.8961 - loss: 0.4128 - precision: 0.8240 - recall: 0.8590 - val_accuracy: 0.7603 - val_auc: 0.8130 - val_loss: 0.5418 - val_precision: 0.8382 - val_recall: 0.7037 - learning_rate: 1.0000e-05
+Epoch 3/15
+22/22 - 2s - 107ms/step - accuracy: 0.8294 - auc: 0.9047 - loss: 0.3969 - precision: 0.8495 - recall: 0.8404 - val_accuracy: 0.7397 - val_auc: 0.8211 - val_loss: 0.5181 - val_precision: 0.7529 - val_recall: 0.7901 - learning_rate: 1.0000e-05
+Epoch 4/15
+22/22 - 2s - 83ms/step - accuracy: 0.8412 - auc: 0.9164 - loss: 0.3726 - precision: 0.8350 - recall: 0.8883 - val_accuracy: 0.7671 - val_auc: 0.8258 - val_loss: 0.5267 - val_precision: 0.8310 - val_recall: 0.7284 - learning_rate: 1.0000e-05
+Epoch 5/15
+22/22 - 3s - 149ms/step - accuracy: 0.8471 - auc: 0.9232 - loss: 0.3559 - precision: 0.8469 - recall: 0.8830 - val_accuracy: 0.7603 - val_auc: 0.8311 - val_loss: 0.5110 - val_precision: 0.8026 - val_recall: 0.7531 - learning_rate: 1.0000e-05
+Epoch 6/15
+22/22 - 2s - 109ms/step - accuracy: 0.8485 - auc: 0.9302 - loss: 0.3421 - precision: 0.8699 - recall: 0.8537 - val_accuracy: 0.7534 - val_auc: 0.8347 - val_loss: 0.5035 - val_precision: 0.7711 - val_recall: 0.7901 - learning_rate: 1.0000e-05
+Epoch 7/15
+22/22 - 2s - 81ms/step - accuracy: 0.8618 - auc: 0.9326 - loss: 0.3361 - precision: 0.8579 - recall: 0.8989 - val_accuracy: 0.7603 - val_auc: 0.8347 - val_loss: 0.5080 - val_precision: 0.8026 - val_recall: 0.7531 - learning_rate: 1.0000e-05
+Epoch 8/15
+22/22 - 2s - 108ms/step - accuracy: 0.8765 - auc: 0.9357 - loss: 0.3316 - precision: 0.8842 - recall: 0.8936 - val_accuracy: 0.7740 - val_auc: 0.8362 - val_loss: 0.5009 - val_precision: 0.8000 - val_recall: 0.7901 - learning_rate: 1.0000e-05
+Epoch 9/15
+22/22 - 2s - 109ms/step - accuracy: 0.8618 - auc: 0.9378 - loss: 0.3245 - precision: 0.8874 - recall: 0.8590 - val_accuracy: 0.7740 - val_auc: 0.8377 - val_loss: 0.4975 - val_precision: 0.7927 - val_recall: 0.8025 - learning_rate: 1.0000e-05
+Epoch 10/15
+22/22 - 2s - 101ms/step - accuracy: 0.8515 - auc: 0.9386 - loss: 0.3231 - precision: 0.8463 - recall: 0.8936 - val_accuracy: 0.7808 - val_auc: 0.8404 - val_loss: 0.5155 - val_precision: 0.8551 - val_recall: 0.7284 - learning_rate: 1.0000e-05
+Epoch 11/15
+22/22 - 3s - 129ms/step - accuracy: 0.8691 - auc: 0.9408 - loss: 0.3151 - precision: 0.8847 - recall: 0.8777 - val_accuracy: 0.7808 - val_auc: 0.8443 - val_loss: 0.4918 - val_precision: 0.8101 - val_recall: 0.7901 - learning_rate: 1.0000e-05
+Epoch 12/15
+22/22 - 2s - 83ms/step - accuracy: 0.8735 - auc: 0.9431 - loss: 0.3091 - precision: 0.8680 - recall: 0.9096 - val_accuracy: 0.7808 - val_auc: 0.8436 - val_loss: 0.5121 - val_precision: 0.8551 - val_recall: 0.7284 - learning_rate: 1.0000e-05
+Epoch 13/15
+22/22 - 2s - 84ms/step - accuracy: 0.8765 - auc: 0.9453 - loss: 0.3073 - precision: 0.8842 - recall: 0.8936 - val_accuracy: 0.7808 - val_auc: 0.8455 - val_loss: 0.4948 - val_precision: 0.8182 - val_recall: 0.7778 - learning_rate: 1.0000e-05
+Epoch 14/15
+22/22 - 2s - 81ms/step - accuracy: 0.8853 - auc: 0.9528 - loss: 0.2882 - precision: 0.8984 - recall: 0.8936 - val_accuracy: 0.7877 - val_auc: 0.8463 - val_loss: 0.4971 - val_precision: 0.8289 - val_recall: 0.7778 - learning_rate: 5.0000e-06
+Epoch 15/15
+22/22 - 2s - 81ms/step - accuracy: 0.8868 - auc: 0.9526 - loss: 0.2905 - precision: 0.8903 - recall: 0.9069 - val_accuracy: 0.7877 - val_auc: 0.8469 - val_loss: 0.4950 - val_precision: 0.8289 - val_recall: 0.7778 - learning_rate: 5.0000e-06
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz
+
+[1m    0/29515[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step
+[1m29515/29515[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-images-idx3-ubyte.gz
+
+[1m       0/26421880[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step
+[1m 3833856/26421880[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0us/step
+[1m13369344/26421880[0m [32m━━━━━━━━━━[0m[37m━━━━━━━━━━[0m [1m0s[0m 0us/step
+[1m24289280/26421880[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m0s[0m 0us/step
+[1m26421880/26421880[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-labels-idx1-ubyte.gz
+
+[1m   0/5148[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step
+[1m5148/5148[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-images-idx3-ubyte.gz
+
+[1m      0/4422102[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step
+[1m4422102/4422102[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+64                |64                |units
+0.01              |0.01              |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974579.736139   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 4s - 12ms/step - accuracy: 0.7494 - loss: 0.6908 - val_accuracy: 0.8190 - val_loss: 0.5182
+Epoch 2/5
+313/313 - 2s - 5ms/step - accuracy: 0.8148 - loss: 0.5029 - val_accuracy: 0.8190 - val_loss: 0.5047
+Epoch 3/5
+313/313 - 2s - 5ms/step - accuracy: 0.8340 - loss: 0.4570 - val_accuracy: 0.8375 - val_loss: 0.4830
+Epoch 4/5
+313/313 - 3s - 8ms/step - accuracy: 0.8427 - loss: 0.4239 - val_accuracy: 0.8280 - val_loss: 0.4805
+Epoch 5/5
+313/313 - 2s - 7ms/step - accuracy: 0.8544 - loss: 0.3964 - val_accuracy: 0.8095 - val_loss: 0.5660
+[2K
+[2K
+Trial 1 Complete [00h 00m 14s]
+val_loss: 0.4804753363132477
+
+Best val_loss So Far: 0.4804753363132477
+Total elapsed time: 00h 00m 14s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+128               |64                |units
+0.001             |0.01              |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974593.137894   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 3s - 10ms/step - accuracy: 0.7557 - loss: 0.7104 - val_accuracy: 0.8270 - val_loss: 0.5131
+Epoch 2/5
+313/313 - 2s - 7ms/step - accuracy: 0.8275 - loss: 0.4944 - val_accuracy: 0.8355 - val_loss: 0.4728
+Epoch 3/5
+313/313 - 2s - 5ms/step - accuracy: 0.8443 - loss: 0.4380 - val_accuracy: 0.8435 - val_loss: 0.4581
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.8568 - loss: 0.4018 - val_accuracy: 0.8425 - val_loss: 0.4692
+Epoch 5/5
+313/313 - 2s - 5ms/step - accuracy: 0.8661 - loss: 0.3747 - val_accuracy: 0.8470 - val_loss: 0.4503
+[2K
+[2K
+Trial 2 Complete [00h 00m 12s]
+val_loss: 0.45032328367233276
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 00m 26s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+128               |128               |units
+0.01              |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974603.989722   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 4s - 13ms/step - accuracy: 0.7540 - loss: 0.7285 - val_accuracy: 0.8135 - val_loss: 0.5229
+Epoch 2/5
+313/313 - 2s - 5ms/step - accuracy: 0.8170 - loss: 0.5073 - val_accuracy: 0.8245 - val_loss: 0.4918
+Epoch 3/5
+313/313 - 2s - 5ms/step - accuracy: 0.8284 - loss: 0.4675 - val_accuracy: 0.8200 - val_loss: 0.5153
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.8432 - loss: 0.4287 - val_accuracy: 0.8295 - val_loss: 0.4984
+[2K
+[2K
+Trial 3 Complete [00h 00m 09s]
+val_loss: 0.4917823076248169
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 00m 35s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+32                |128               |units
+0.001             |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974613.377768   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 2s - 8ms/step - accuracy: 0.7097 - loss: 0.8380 - val_accuracy: 0.8100 - val_loss: 0.5816
+Epoch 2/5
+313/313 - 2s - 5ms/step - accuracy: 0.8102 - loss: 0.5435 - val_accuracy: 0.8315 - val_loss: 0.5117
+Epoch 3/5
+313/313 - 2s - 8ms/step - accuracy: 0.8347 - loss: 0.4841 - val_accuracy: 0.8360 - val_loss: 0.4870
+Epoch 4/5
+313/313 - 2s - 8ms/step - accuracy: 0.8460 - loss: 0.4497 - val_accuracy: 0.8425 - val_loss: 0.4662
+Epoch 5/5
+313/313 - 2s - 5ms/step - accuracy: 0.8525 - loss: 0.4267 - val_accuracy: 0.8450 - val_loss: 0.4540
+[2K
+[2K
+Trial 4 Complete [00h 00m 11s]
+val_loss: 0.4539637565612793
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 00m 46s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+64                |128               |units
+0.001             |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974624.608428   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 3s - 8ms/step - accuracy: 0.7413 - loss: 0.7598 - val_accuracy: 0.8205 - val_loss: 0.5458
+Epoch 2/5
+313/313 - 2s - 5ms/step - accuracy: 0.8229 - loss: 0.5142 - val_accuracy: 0.8335 - val_loss: 0.4871
+Epoch 3/5
+313/313 - 2s - 5ms/step - accuracy: 0.8372 - loss: 0.4614 - val_accuracy: 0.8405 - val_loss: 0.4671
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.8491 - loss: 0.4277 - val_accuracy: 0.8495 - val_loss: 0.4510
+Epoch 5/5
+313/313 - 3s - 8ms/step - accuracy: 0.8589 - loss: 0.4002 - val_accuracy: 0.8545 - val_loss: 0.4506
+[2K
+[2K
+Trial 5 Complete [00h 00m 11s]
+val_loss: 0.4506043791770935
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 00m 57s
+
+Search: Running Trial #6
+
+Value             |Best Value So Far |Hyperparameter
+32                |128               |units
+0.01              |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974635.703544   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 3s - 8ms/step - accuracy: 0.7367 - loss: 0.7441 - val_accuracy: 0.8235 - val_loss: 0.5289
+Epoch 2/5
+313/313 - 2s - 5ms/step - accuracy: 0.8110 - loss: 0.5332 - val_accuracy: 0.8055 - val_loss: 0.5245
+Epoch 3/5
+313/313 - 2s - 5ms/step - accuracy: 0.8264 - loss: 0.4801 - val_accuracy: 0.8265 - val_loss: 0.4855
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.8369 - loss: 0.4497 - val_accuracy: 0.8060 - val_loss: 0.5312
+Epoch 5/5
+313/313 - 2s - 5ms/step - accuracy: 0.8403 - loss: 0.4400 - val_accuracy: 0.8285 - val_loss: 0.4905
+[2K
+[2K
+Trial 6 Complete [00h 00m 10s]
+val_loss: 0.4854893386363983
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 01m 07s
+
+Search: Running Trial #7
+
+Value             |Best Value So Far |Hyperparameter
+128               |128               |units
+0.0001            |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974645.338875   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 4s - 12ms/step - accuracy: 0.6259 - loss: 1.2015 - val_accuracy: 0.7335 - val_loss: 0.8052
+Epoch 2/5
+313/313 - 2s - 6ms/step - accuracy: 0.7617 - loss: 0.7246 - val_accuracy: 0.7845 - val_loss: 0.6552
+Epoch 3/5
+313/313 - 2s - 6ms/step - accuracy: 0.7960 - loss: 0.6197 - val_accuracy: 0.8040 - val_loss: 0.5918
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.8130 - loss: 0.5648 - val_accuracy: 0.8205 - val_loss: 0.5547
+Epoch 5/5
+313/313 - 2s - 5ms/step - accuracy: 0.8272 - loss: 0.5287 - val_accuracy: 0.8275 - val_loss: 0.5298
+[2K
+[2K
+Trial 7 Complete [00h 00m 12s]
+val_loss: 0.5297515988349915
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 01m 19s
+
+Search: Running Trial #8
+
+Value             |Best Value So Far |Hyperparameter
+64                |128               |units
+0.0001            |0.001             |learning_rate
+
+Epoch 1/5
+E0000 00:00:1793974657.076899   24386 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_15}}
+313/313 - 3s - 8ms/step - accuracy: 0.5698 - loss: 1.3727 - val_accuracy: 0.7115 - val_loss: 0.9026
+Epoch 2/5
+313/313 - 2s - 7ms/step - accuracy: 0.7385 - loss: 0.8042 - val_accuracy: 0.7700 - val_loss: 0.7196
+Epoch 3/5
+313/313 - 2s - 7ms/step - accuracy: 0.7762 - loss: 0.6843 - val_accuracy: 0.7955 - val_loss: 0.6465
+Epoch 4/5
+313/313 - 2s - 5ms/step - accuracy: 0.7953 - loss: 0.6226 - val_accuracy: 0.8040 - val_loss: 0.6041
+Epoch 5/5
+313/313 - 2s - 5ms/step - accuracy: 0.8088 - loss: 0.5822 - val_accuracy: 0.8125 - val_loss: 0.5762
+[2K
+[2K
+Trial 8 Complete [00h 00m 11s]
+val_loss: 0.5761674642562866
+
+Best val_loss So Far: 0.45032328367233276
+Total elapsed time: 00h 01m 30s
+trial_id    status  val_loss  units  learning_rate
+       1 COMPLETED  0.450323    128         0.0010
+       4 COMPLETED  0.450604     64         0.0010
+       3 COMPLETED  0.453964     32         0.0010
+       0 COMPLETED  0.480475     64         0.0100
+       5 COMPLETED  0.485489     32         0.0100
+       2 COMPLETED  0.491782    128         0.0100
+       6 COMPLETED  0.529752    128         0.0001
+       7 COMPLETED  0.576167     64         0.0001
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+0.4               |0.4               |dropout
+1                 |1                 |unfrozen_layers
+3e-05             |3e-05             |learning_rate
+
+Epoch 1/5
+22/22 - 9s - 421ms/step - accuracy: 0.8000 - auc: 0.8815 - loss: 0.4351 - precision: 0.7885 - recall: 0.8723 - val_accuracy: 0.7397 - val_auc: 0.8067 - val_loss: 0.5362 - val_precision: 0.7792 - val_recall: 0.7407 - learning_rate: 3.0000e-05
+Epoch 2/5
+22/22 - 2s - 96ms/step - accuracy: 0.8074 - auc: 0.8858 - loss: 0.4256 - precision: 0.8249 - recall: 0.8271 - val_accuracy: 0.7397 - val_auc: 0.8117 - val_loss: 0.5315 - val_precision: 0.7792 - val_recall: 0.7407 - learning_rate: 3.0000e-05
+Epoch 3/5
+22/22 - 2s - 96ms/step - accuracy: 0.8074 - auc: 0.8929 - loss: 0.4161 - precision: 0.8149 - recall: 0.8431 - val_accuracy: 0.7466 - val_auc: 0.8142 - val_loss: 0.5292 - val_precision: 0.7750 - val_recall: 0.7654 - learning_rate: 3.0000e-05
+Epoch 4/5
+22/22 - 2s - 97ms/step - accuracy: 0.8309 - auc: 0.9087 - loss: 0.3829 - precision: 0.8338 - recall: 0.8670 - val_accuracy: 0.7397 - val_auc: 0.8179 - val_loss: 0.5280 - val_precision: 0.7792 - val_recall: 0.7407 - learning_rate: 3.0000e-05
+Epoch 5/5
+22/22 - 2s - 101ms/step - accuracy: 0.8265 - auc: 0.9117 - loss: 0.3835 - precision: 0.8308 - recall: 0.8617 - val_accuracy: 0.7466 - val_auc: 0.8210 - val_loss: 0.5212 - val_precision: 0.7750 - val_recall: 0.7654 - learning_rate: 3.0000e-05
+[2K
+[2K
+Trial 1 Complete [00h 00m 20s]
+val_loss: 0.5211918354034424
+
+Best val_loss So Far: 0.5211918354034424
+Total elapsed time: 00h 00m 20s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+0.2               |0.4               |dropout
+4                 |1                 |unfrozen_layers
+3e-05             |3e-05             |learning_rate
+
+Epoch 1/5
+22/22 - 9s - 406ms/step - accuracy: 0.8206 - auc: 0.8999 - loss: 0.4022 - precision: 0.8223 - recall: 0.8617 - val_accuracy: 0.7808 - val_auc: 0.8229 - val_loss: 0.5152 - val_precision: 0.8182 - val_recall: 0.7778 - learning_rate: 3.0000e-05
+Epoch 2/5
+22/22 - 2s - 103ms/step - accuracy: 0.8426 - auc: 0.9220 - loss: 0.3625 - precision: 0.8458 - recall: 0.8750 - val_accuracy: 0.7329 - val_auc: 0.8334 - val_loss: 0.5052 - val_precision: 0.7386 - val_recall: 0.8025 - learning_rate: 3.0000e-05
+Epoch 3/5
+22/22 - 2s - 86ms/step - accuracy: 0.8691 - auc: 0.9371 - loss: 0.3299 - precision: 0.8806 - recall: 0.8830 - val_accuracy: 0.7808 - val_auc: 0.8331 - val_loss: 0.5151 - val_precision: 0.8356 - val_recall: 0.7531 - learning_rate: 3.0000e-05
+Epoch 4/5
+22/22 - 3s - 120ms/step - accuracy: 0.8868 - auc: 0.9481 - loss: 0.3003 - precision: 0.9030 - recall: 0.8910 - val_accuracy: 0.7808 - val_auc: 0.8447 - val_loss: 0.4962 - val_precision: 0.8182 - val_recall: 0.7778 - learning_rate: 3.0000e-05
+Epoch 5/5
+22/22 - 2s - 82ms/step - accuracy: 0.9015 - auc: 0.9614 - loss: 0.2611 - precision: 0.9034 - recall: 0.9202 - val_accuracy: 0.7397 - val_auc: 0.8519 - val_loss: 0.5069 - val_precision: 0.7312 - val_recall: 0.8395 - learning_rate: 3.0000e-05
+[2K
+[2K
+Trial 2 Complete [00h 00m 20s]
+val_loss: 0.4962390661239624
+
+Best val_loss So Far: 0.4962390661239624
+Total elapsed time: 00h 00m 40s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+0.5               |0.2               |dropout
+1                 |4                 |unfrozen_layers
+0.0001            |3e-05             |learning_rate
+
+Epoch 1/5
+22/22 - 9s - 428ms/step - accuracy: 0.7809 - auc: 0.8539 - loss: 0.4750 - precision: 0.8027 - recall: 0.8005 - val_accuracy: 0.7603 - val_auc: 0.8203 - val_loss: 0.5252 - val_precision: 0.7556 - val_recall: 0.8395 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 2s - 108ms/step - accuracy: 0.8044 - auc: 0.8876 - loss: 0.4180 - precision: 0.8045 - recall: 0.8537 - val_accuracy: 0.7671 - val_auc: 0.8266 - val_loss: 0.5238 - val_precision: 0.8219 - val_recall: 0.7407 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 2s - 96ms/step - accuracy: 0.8000 - auc: 0.8912 - loss: 0.4113 - precision: 0.8061 - recall: 0.8404 - val_accuracy: 0.7603 - val_auc: 0.8290 - val_loss: 0.5155 - val_precision: 0.7949 - val_recall: 0.7654 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 2s - 95ms/step - accuracy: 0.8235 - auc: 0.9005 - loss: 0.3990 - precision: 0.8575 - recall: 0.8165 - val_accuracy: 0.7740 - val_auc: 0.8332 - val_loss: 0.5096 - val_precision: 0.8077 - val_recall: 0.7778 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 2s - 96ms/step - accuracy: 0.8691 - auc: 0.9373 - loss: 0.3219 - precision: 0.8708 - recall: 0.8963 - val_accuracy: 0.7740 - val_auc: 0.8425 - val_loss: 0.5012 - val_precision: 0.8077 - val_recall: 0.7778 - learning_rate: 1.0000e-04
+[2K
+[2K
+Trial 3 Complete [00h 00m 20s]
+val_loss: 0.5012117624282837
+
+Best val_loss So Far: 0.4962390661239624
+Total elapsed time: 00h 01m 01s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+0.2               |0.2               |dropout
+2                 |4                 |unfrozen_layers
+1e-05             |3e-05             |learning_rate
+
+Epoch 1/5
+22/22 - 9s - 425ms/step - accuracy: 0.8338 - auc: 0.9097 - loss: 0.3934 - precision: 0.8346 - recall: 0.8723 - val_accuracy: 0.7534 - val_auc: 0.8085 - val_loss: 0.5324 - val_precision: 0.7778 - val_recall: 0.7778 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 2s - 96ms/step - accuracy: 0.8324 - auc: 0.9116 - loss: 0.3872 - precision: 0.8429 - recall: 0.8564 - val_accuracy: 0.7466 - val_auc: 0.8135 - val_loss: 0.5291 - val_precision: 0.7821 - val_recall: 0.7531 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 2s - 101ms/step - accuracy: 0.8191 - auc: 0.9098 - loss: 0.3818 - precision: 0.8373 - recall: 0.8351 - val_accuracy: 0.7466 - val_auc: 0.8184 - val_loss: 0.5236 - val_precision: 0.7750 - val_recall: 0.7654 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 2s - 109ms/step - accuracy: 0.8515 - auc: 0.9337 - loss: 0.3505 - precision: 0.8747 - recall: 0.8537 - val_accuracy: 0.7397 - val_auc: 0.8235 - val_loss: 0.5185 - val_precision: 0.7722 - val_recall: 0.7531 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 2s - 87ms/step - accuracy: 0.8618 - auc: 0.9281 - loss: 0.3556 - precision: 0.8525 - recall: 0.9069 - val_accuracy: 0.7603 - val_auc: 0.8214 - val_loss: 0.5305 - val_precision: 0.8382 - val_recall: 0.7037 - learning_rate: 1.0000e-05
+[2K
+[2K
+Trial 4 Complete [00h 00m 21s]
+val_loss: 0.5184946060180664
+
+Best val_loss So Far: 0.4962390661239624
+Total elapsed time: 00h 01m 21s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+0.2               |0.2               |dropout
+2                 |4                 |unfrozen_layers
+0.0001            |3e-05             |learning_rate
+
+Epoch 1/5
+22/22 - 9s - 427ms/step - accuracy: 0.7882 - auc: 0.8739 - loss: 0.4411 - precision: 0.7974 - recall: 0.8271 - val_accuracy: 0.7877 - val_auc: 0.8422 - val_loss: 0.4964 - val_precision: 0.8205 - val_recall: 0.7901 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 2s - 84ms/step - accuracy: 0.8485 - auc: 0.9100 - loss: 0.3811 - precision: 0.8509 - recall: 0.8803 - val_accuracy: 0.7466 - val_auc: 0.8371 - val_loss: 0.5179 - val_precision: 0.7292 - val_recall: 0.8642 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 2s - 78ms/step - accuracy: 0.8912 - auc: 0.9498 - loss: 0.2991 - precision: 0.9016 - recall: 0.9016 - val_accuracy: 0.7260 - val_auc: 0.8539 - val_loss: 0.5759 - val_precision: 0.6881 - val_recall: 0.9259 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 2s - 97ms/step - accuracy: 0.8574 - auc: 0.9379 - loss: 0.3203 - precision: 0.8550 - recall: 0.8936 - val_accuracy: 0.7671 - val_auc: 0.8563 - val_loss: 0.4738 - val_precision: 0.7765 - val_recall: 0.8148 - learning_rate: 5.0000e-05
+Epoch 5/5
+22/22 - 2s - 78ms/step - accuracy: 0.9250 - auc: 0.9743 - loss: 0.2360 - precision: 0.9333 - recall: 0.9309 - val_accuracy: 0.7740 - val_auc: 0.8508 - val_loss: 0.5176 - val_precision: 0.8636 - val_recall: 0.7037 - learning_rate: 5.0000e-05
+[2K
+[2K
+Trial 5 Complete [00h 00m 19s]
+val_loss: 0.47382840514183044
+
+Best val_loss So Far: 0.47382840514183044
+Total elapsed time: 00h 01m 40s
+
+Search: Running Trial #6
+
+Value             |Best Value So Far |Hyperparameter
+0.4               |0.2               |dropout
+2                 |2                 |unfrozen_layers
+3e-05             |0.0001            |learning_rate
+
+Epoch 1/5
+22/22 - 10s - 448ms/step - accuracy: 0.7941 - auc: 0.8730 - loss: 0.4457 - precision: 0.8089 - recall: 0.8218 - val_accuracy: 0.7123 - val_auc: 0.8158 - val_loss: 0.5317 - val_precision: 0.7097 - val_recall: 0.8148 - learning_rate: 3.0000e-05
+Epoch 2/5
+22/22 - 2s - 78ms/step - accuracy: 0.8029 - auc: 0.8790 - loss: 0.4343 - precision: 0.8071 - recall: 0.8457 - val_accuracy: 0.7466 - val_auc: 0.8140 - val_loss: 0.5477 - val_precision: 0.8235 - val_recall: 0.6914 - learning_rate: 3.0000e-05
+Epoch 3/5
+22/22 - 2s - 80ms/step - accuracy: 0.8250 - auc: 0.8994 - loss: 0.3974 - precision: 0.8338 - recall: 0.8537 - val_accuracy: 0.7534 - val_auc: 0.8188 - val_loss: 0.5567 - val_precision: 0.8462 - val_recall: 0.6790 - learning_rate: 3.0000e-05
+Epoch 4/5
+22/22 - 2s - 97ms/step - accuracy: 0.8485 - auc: 0.9105 - loss: 0.3801 - precision: 0.8699 - recall: 0.8537 - val_accuracy: 0.7603 - val_auc: 0.8286 - val_loss: 0.5168 - val_precision: 0.7949 - val_recall: 0.7654 - learning_rate: 1.5000e-05
+Epoch 5/5
+22/22 - 2s - 97ms/step - accuracy: 0.8618 - auc: 0.9333 - loss: 0.3370 - precision: 0.8790 - recall: 0.8697 - val_accuracy: 0.7603 - val_auc: 0.8281 - val_loss: 0.5172 - val_precision: 0.7949 - val_recall: 0.7654 - learning_rate: 1.5000e-05
+[2K
+[2K
+Trial 6 Complete [00h 00m 20s]
+val_loss: 0.516767144203186
+
+Best val_loss So Far: 0.47382840514183044
+Total elapsed time: 00h 02m 01s
+
+Search: Running Trial #7
+
+Value             |Best Value So Far |Hyperparameter
+0.2               |0.2               |dropout
+1                 |2                 |unfrozen_layers
+0.0001            |0.0001            |learning_rate
+
+Epoch 1/5
+22/22 - 8s - 379ms/step - accuracy: 0.8250 - auc: 0.8998 - loss: 0.4077 - precision: 0.8286 - recall: 0.8617 - val_accuracy: 0.7466 - val_auc: 0.8156 - val_loss: 0.5275 - val_precision: 0.7500 - val_recall: 0.8148 - learning_rate: 1.0000e-04
+Epoch 2/5
+22/22 - 3s - 118ms/step - accuracy: 0.8456 - auc: 0.9264 - loss: 0.3558 - precision: 0.8430 - recall: 0.8856 - val_accuracy: 0.7603 - val_auc: 0.8255 - val_loss: 0.5272 - val_precision: 0.8382 - val_recall: 0.7037 - learning_rate: 1.0000e-04
+Epoch 3/5
+22/22 - 5s - 211ms/step - accuracy: 0.8735 - auc: 0.9443 - loss: 0.3179 - precision: 0.8737 - recall: 0.9016 - val_accuracy: 0.7603 - val_auc: 0.8313 - val_loss: 0.5122 - val_precision: 0.8194 - val_recall: 0.7284 - learning_rate: 1.0000e-04
+Epoch 4/5
+22/22 - 2s - 96ms/step - accuracy: 0.8985 - auc: 0.9578 - loss: 0.2900 - precision: 0.9072 - recall: 0.9096 - val_accuracy: 0.7466 - val_auc: 0.8416 - val_loss: 0.4898 - val_precision: 0.7619 - val_recall: 0.7901 - learning_rate: 1.0000e-04
+Epoch 5/5
+22/22 - 2s - 95ms/step - accuracy: 0.9206 - auc: 0.9687 - loss: 0.2533 - precision: 0.9259 - recall: 0.9309 - val_accuracy: 0.7877 - val_auc: 0.8452 - val_loss: 0.4891 - val_precision: 0.8289 - val_recall: 0.7778 - learning_rate: 1.0000e-04
+[2K
+[2K
+Trial 7 Complete [00h 00m 23s]
+val_loss: 0.48910725116729736
+
+Best val_loss So Far: 0.47382840514183044
+Total elapsed time: 00h 02m 23s
+
+Search: Running Trial #8
+
+Value             |Best Value So Far |Hyperparameter
+0.5               |0.2               |dropout
+4                 |2                 |unfrozen_layers
+1e-05             |0.0001            |learning_rate
+
+Epoch 1/5
+22/22 - 10s - 441ms/step - accuracy: 0.7676 - auc: 0.8508 - loss: 0.4817 - precision: 0.7753 - recall: 0.8165 - val_accuracy: 0.7329 - val_auc: 0.8068 - val_loss: 0.5372 - val_precision: 0.7692 - val_recall: 0.7407 - learning_rate: 1.0000e-05
+Epoch 2/5
+22/22 - 2s - 80ms/step - accuracy: 0.7765 - auc: 0.8630 - loss: 0.4601 - precision: 0.7947 - recall: 0.8032 - val_accuracy: 0.7466 - val_auc: 0.8090 - val_loss: 0.5397 - val_precision: 0.7973 - val_recall: 0.7284 - learning_rate: 1.0000e-05
+Epoch 3/5
+22/22 - 2s - 98ms/step - accuracy: 0.7912 - auc: 0.8683 - loss: 0.4479 - precision: 0.7970 - recall: 0.8351 - val_accuracy: 0.7466 - val_auc: 0.8131 - val_loss: 0.5298 - val_precision: 0.7750 - val_recall: 0.7654 - learning_rate: 1.0000e-05
+Epoch 4/5
+22/22 - 3s - 126ms/step - accuracy: 0.7941 - auc: 0.8797 - loss: 0.4332 - precision: 0.7995 - recall: 0.8378 - val_accuracy: 0.7466 - val_auc: 0.8178 - val_loss: 0.5249 - val_precision: 0.7821 - val_recall: 0.7531 - learning_rate: 1.0000e-05
+Epoch 5/5
+22/22 - 2s - 89ms/step - accuracy: 0.7838 - auc: 0.8847 - loss: 0.4247 - precision: 0.7899 - recall: 0.8298 - val_accuracy: 0.7329 - val_auc: 0.8189 - val_loss: 0.5283 - val_precision: 0.7838 - val_recall: 0.7160 - learning_rate: 1.0000e-05
+[2K
+[2K
+Trial 8 Complete [00h 00m 21s]
+val_loss: 0.5249460339546204
+
+Best val_loss So Far: 0.47382840514183044
+Total elapsed time: 00h 02m 44s
+trial_id    status  val_loss  dropout  unfrozen_layers  learning_rate
+       4 COMPLETED  0.473828      0.2                2        0.00010
+       6 COMPLETED  0.489107      0.2                1        0.00010
+       1 COMPLETED  0.496239      0.2                4        0.00003
+       2 COMPLETED  0.501212      0.5                1        0.00010
+       5 COMPLETED  0.516767      0.4                2        0.00003
+       3 COMPLETED  0.518495      0.2                2        0.00001
+       0 COMPLETED  0.521192      0.4                1        0.00003
+       7 COMPLETED  0.524946      0.5                4        0.00001
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 10 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Model: "mobilenetv2_classifier"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ rgb_pixels_0_255 (InputLayer)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ train_only_augmentation         │ (None, 224, 224, 3)    │             0 │
+│ (Sequential)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_flip (RandomFlip)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_rotation            │ (None, 224, 224, 3)    │             0 │
+│ (RandomRotation)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_zoom (RandomZoom)   │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ random_contrast            │ (None, 224, 224, 3)    │             0 │
+│ (RandomContrast)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenet_preprocess            │ (None, 224, 224, 3)    │             0 │
+│ (Rescaling)                     │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ mobilenetv2_1.00_224            │ (None, 7, 7, 1280)     │     2,257,984 │
+│ (Functional)                    │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ input_layer_1 (InputLayer) │ (None, 224, 224, 3)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1 (Conv2D)             │ (None, 112, 112, 32)   │           864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ bn_Conv1                   │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv1_relu (ReLU)          │ (None, 112, 112, 32)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise    │ (None, 112, 112, 32)   │           288 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_depthwise_BN │ (None, 112, 112, 32)   │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └                            │ (None, 112, 112, 32)   │             0 │
+│ expanded_conv_depthwise_relu    │                        │               │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project      │ (None, 112, 112, 16)   │           512 │
+│ (Conv2D)                        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ expanded_conv_project_BN   │ (None, 112, 112, 16)   │            64 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand (Conv2D)    │ (None, 112, 112, 96)   │         1,536 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_BN          │ (None, 112, 112, 96)   │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_expand_relu (ReLU) │ (None, 112, 112, 96)   │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_pad                │ (None, 113, 113, 96)   │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise          │ (None, 56, 56, 96)     │           864 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_BN       │ (None, 56, 56, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_depthwise_relu     │ (None, 56, 56, 96)     │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project (Conv2D)   │ (None, 56, 56, 24)     │         2,304 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_1_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise          │ (None, 56, 56, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_BN       │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_depthwise_relu     │ (None, 56, 56, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project (Conv2D)   │ (None, 56, 56, 24)     │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_project_BN         │ (None, 56, 56, 24)     │            96 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_2_add (Add)          │ (None, 56, 56, 24)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand (Conv2D)    │ (None, 56, 56, 144)    │         3,456 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_BN          │ (None, 56, 56, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_expand_relu (ReLU) │ (None, 56, 56, 144)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_pad                │ (None, 57, 57, 144)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise          │ (None, 28, 28, 144)    │         1,296 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_BN       │ (None, 28, 28, 144)    │           576 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_depthwise_relu     │ (None, 28, 28, 144)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project (Conv2D)   │ (None, 28, 28, 32)     │         4,608 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_3_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_4_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise          │ (None, 28, 28, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_BN       │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_depthwise_relu     │ (None, 28, 28, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project (Conv2D)   │ (None, 28, 28, 32)     │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_project_BN         │ (None, 28, 28, 32)     │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_5_add (Add)          │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand (Conv2D)    │ (None, 28, 28, 192)    │         6,144 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_BN          │ (None, 28, 28, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_expand_relu (ReLU) │ (None, 28, 28, 192)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_pad                │ (None, 29, 29, 192)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise          │ (None, 14, 14, 192)    │         1,728 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_BN       │ (None, 14, 14, 192)    │           768 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_depthwise_relu     │ (None, 14, 14, 192)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project (Conv2D)   │ (None, 14, 14, 64)     │        12,288 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_6_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_7_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_8_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand (Conv2D)    │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_BN          │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_expand_relu (ReLU) │ (None, 14, 14, 384)    │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise          │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_BN       │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_depthwise_relu     │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project (Conv2D)   │ (None, 14, 14, 64)     │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_project_BN         │ (None, 14, 14, 64)     │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_9_add (Add)          │ (None, 14, 14, 64)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand (Conv2D)   │ (None, 14, 14, 384)    │        24,576 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_BN         │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_expand_relu       │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise         │ (None, 14, 14, 384)    │         3,456 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_BN      │ (None, 14, 14, 384)    │         1,536 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_depthwise_relu    │ (None, 14, 14, 384)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project (Conv2D)  │ (None, 14, 14, 96)     │        36,864 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_10_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_11_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise         │ (None, 14, 14, 576)    │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_BN      │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_depthwise_relu    │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project (Conv2D)  │ (None, 14, 14, 96)     │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_project_BN        │ (None, 14, 14, 96)     │           384 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_12_add (Add)         │ (None, 14, 14, 96)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand (Conv2D)   │ (None, 14, 14, 576)    │        55,296 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_BN         │ (None, 14, 14, 576)    │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_expand_relu       │ (None, 14, 14, 576)    │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_pad               │ (None, 15, 15, 576)    │             0 │
+│ (ZeroPadding2D)                 │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise         │ (None, 7, 7, 576)      │         5,184 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_BN      │ (None, 7, 7, 576)      │         2,304 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_depthwise_relu    │ (None, 7, 7, 576)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project (Conv2D)  │ (None, 7, 7, 160)      │        92,160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_13_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_14_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project (Conv2D)  │ (None, 7, 7, 160)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_project_BN        │ (None, 7, 7, 160)      │           640 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_15_add (Add)         │ (None, 7, 7, 160)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand (Conv2D)   │ (None, 7, 7, 960)      │       153,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_BN         │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_expand_relu       │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise         │ (None, 7, 7, 960)      │         8,640 │
+│ (DepthwiseConv2D)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_BN      │ (None, 7, 7, 960)      │         3,840 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_depthwise_relu    │ (None, 7, 7, 960)      │             0 │
+│ (ReLU)                          │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project (Conv2D)  │ (None, 7, 7, 320)      │       307,200 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ block_16_project_BN        │ (None, 7, 7, 320)      │         1,280 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1 (Conv2D)            │ (None, 7, 7, 1280)     │       409,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ Conv_1_bn                  │ (None, 7, 7, 1280)     │         5,120 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│    └ out_relu (ReLU)            │ (None, 7, 7, 1280)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling2d        │ (None, 1280)           │             0 │
+│ (GlobalAveragePooling2D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ head_dropout (Dropout)          │ (None, 1280)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ p_ai (Dense)                    │ (None, 1)              │         1,281 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 2,259,265 (8.62 MB)
+ Trainable params: 718,081 (2.74 MB)
+ Non-trainable params: 1,541,184 (5.88 MB)
+
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 10 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 10 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+W0000 00:00:1793974855.318107   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974856.037700   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+WARNING:tensorflow:5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x783cfe70ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+W0000 00:00:1793974858.009135   28173 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974858.111145   28172 png_io.cc:96] PNG warning: iCCP: profile 'ICC Profile': 'CMYK': invalid ICC profile color space
+W0000 00:00:1793974858.457203   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974858.627057   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974858.666918   28173 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974860.525079   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+W0000 00:00:1793974861.285564   28172 png_io.cc:96] PNG warning: iCCP: known incorrect sRGB profile
+WARNING:tensorflow:5 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x783cfe70ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/usr/local/lib/python3.13/dist-packages/keras/src/saving/saving_lib.py:797: UserWarning: Skipping variable loading for optimizer 'adam', because it has 10 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+   model  threshold  accuracy  precision  recall       f1  roc_auc  tn  fp  fn  tp  errors_shown
+baseline   0.651028  0.493151   0.666667    0.15 0.244898 0.667235  60   6  68  12            10
+transfer   0.680687  0.705479   0.776119    0.65 0.707483 0.837689  51  15  28  52            10

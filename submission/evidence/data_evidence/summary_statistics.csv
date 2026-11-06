@@ -1,0 +1,5 @@
+,width,width,width,height,height,height,size_bytes,size_bytes,size_bytes
+,min,median,max,min,median,max,min,median,max
+class_name,,,,,,,,,
+ai,225,1028.5,6000,135,800.0,4001,11738,199802.5,5626183
+real,183,940.0,8495,158,720.0,7091,11311,144982.0,10195352

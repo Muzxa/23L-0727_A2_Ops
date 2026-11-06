@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "proportions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "splits": [
+    {
+      "split": "train",
+      "files": 680,
+      "real": 304,
+      "ai": 376
+    },
+    {
+      "split": "val",
+      "files": 146,
+      "real": 65,
+      "ai": 81
+    },
+    {
+      "split": "test",
+      "files": 146,
+      "real": 66,
+      "ai": 80
+    }
+  ],
+  "excluded_label_conflicts": 0,
+  "retained_images": 972,
+  "duplicates_removed": 1,
+  "original_split_policy": "Repartition globally after deduplication; do not mix with published-split results.",
+  "limits": "Exact decoded-pixel deduplication only; near duplicates and shared sources may remain."
+}

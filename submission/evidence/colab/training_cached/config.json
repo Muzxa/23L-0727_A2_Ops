@@ -1,0 +1,12 @@
+{
+  "root": "/content/23L-0727_A2_Ops/data/processed",
+  "splits": "/content/drive/MyDrive/23L-0727_A2_Ops/data_evidence",
+  "out": "/content/23L-0727_evidence/training_cached",
+  "size": 224,
+  "batch": 32,
+  "baseline_epochs": 20,
+  "head_epochs": 10,
+  "fine_epochs": 15,
+  "tuner_epochs": 5,
+  "seed": 42
+}

@@ -1,18 +1,20 @@
-# Verification performed locally
+# Completed real-data verification - 6 November 2026
 
-Date: 6 November 2026 (Asia/Karachi).
+The actual Colab T4 experiment is complete, beyond the earlier synthetic software checks.
 
-These checks use synthetic fixtures. They are software verification, not VisionGuard dataset statistics or model performance results.
+- 973 original readable images; zero unreadable candidates; one duplicate removed; 972 retained.
+- Stratified split sizes: 680/146/146. Original membership is identical in local and Colab manifests.
+- Zero decoded-pixel hash overlap between splits.
+- One Colab processed PNG repaired losslessly from its audited original; 972/972 pixel hashes verified.
+- Scratch CNN: 10 epochs, best epoch 6. Frozen head: 10 epochs, best 10. Last-block stage: 15 epochs, best 11.
+- Eight completed Fashion-MNIST toy trials and eight completed applied trials.
+- Tuned transfer selected by validation loss; thresholds locked before test.
+- Saved probabilities reproduce all reported test metrics without another model inference pass.
+- Ten displayed errors per model inspected and annotated with visible observations/testable hypotheses.
+- Local Git/DVC two-version push/delete-cache/pull recovery passed. Both toy commits are published on DagsHub's dvc-toy branch.
+- Real raw/processed/split DVC objects pushed to a local remote and verified in sync.
+- Four local unit tests passed after the input caching change.
 
-- Unit checks passed for unreadable files, byte/pixel duplicate detection, conflicting-label removal, RGB conversion and disjoint stratified splits.
-- Threshold optimization matched exhaustive weighted false-positive/false-negative costs on a known fixture.
-- A local Git/DVC toy created two commits, pushed both data versions, restored the older commit, removed its CSV and local DVC cache, pulled from the configured remote and verified exact original content.
-- The applied dataset-versioning helper was tested on synthetic data. It tracked the raw/processed/split pointers, pushed actual DVC storage objects, committed source/metadata and created a persistent bare Git backup.
-- TensorFlow/Keras integration passed on CPU: scratch CNN training/save/reload; frozen MobileNetV2 head training; last-block fine-tuning; eight completed applied Keras Tuner trials; winning checkpoint reload; deterministic repeated inference; validation threshold; final evaluation metrics, confusion matrix, ROC and error grid.
-- Synthetic smoke test used randomly initialized MobileNetV2 weights to avoid treating downloaded pretraining or fake images as a real assignment experiment. The actual notebook requests ImageNet weights.
-- Local smoke environment: Python 3.11.15, TensorFlow 2.21.0, Keras 3.15.1, macOS CPU. Colab's own exact environment will be recorded when you run it.
-- Notebook format validation and Python-cell syntax checks passed. Source modules compile.
+Full evidence lives under outputs/23L-0727_A2_Ops. FINAL_VERIFICATION.json records the completed evidence checks. The report and submission archive are under submission/.
 
-A missing TensorBoard dependency found by integration testing was added to requirements and the notebook installation cell. A DVC pointer-discovery/ignore ordering issue found by testing was corrected before packaging.
-
-Not executed here: download/audit of the full Kaggle dataset, pretrained-weight training on that dataset, Fashion-MNIST toy training, Google Colab GPU execution, account creation, DagsHub/GitHub publication or final report writing. Each has runnable code or instructions, but no evidence of execution is claimed.
+No remote MLflow runs, API deployment, Tasks 3-8, or Grad-CAM bonus are claimed.

@@ -1,0 +1,42 @@
+{
+  "transfer_candidate": "tuned",
+  "thresholds": {
+    "baseline": 0.6510280966758728,
+    "transfer": 0.6806868314743042
+  },
+  "threshold_rule": "Minimize 2*FP+FN on validation. AI=1. False accusation of a real photo costs twice a missed AI image.",
+  "stages": {
+    "baseline": {
+      "best_epoch": 6,
+      "best_val_loss": 0.668812096118927,
+      "epochs_run": 10
+    },
+    "head": {
+      "best_epoch": 10,
+      "best_val_loss": 0.5379459261894226,
+      "epochs_run": 10
+    },
+    "finetune": {
+      "best_epoch": 11,
+      "best_val_loss": 0.49178507924079895,
+      "epochs_run": 15
+    }
+  },
+  "tuned_hyperparameters": {
+    "dropout": 0.2,
+    "unfrozen_layers": 2,
+    "learning_rate": 0.0001
+  },
+  "split_sha256": {
+    "audit.csv": "3359311ec45639b2284bb4c16a7e3cefc04f994154856923112fd45cb8fce21b",
+    "corrupt.csv": "eb0bb1c3659b29e3fbafb7584a9b880a122f7085504f9dce2ac04296ac97843e",
+    "exact_duplicates.csv": "2a864caada682293fa98ac9010fe3f8fc369f85931b77ecd8ff3b2ab1fcaca7b",
+    "pixel_duplicates.csv": "2a864caada682293fa98ac9010fe3f8fc369f85931b77ecd8ff3b2ab1fcaca7b",
+    "summary_statistics.csv": "5f022b7bbd1aa367ff99557e17874af1a8e6dd7c85dfb5928577fee031fd5b0c",
+    "class_counts.csv": "d18bb87a03b63aa920fa44a2b3657c65a8efac5e8ef841662c391771f4da6e90",
+    "label_conflicts.csv": "eb0bb1c3659b29e3fbafb7584a9b880a122f7085504f9dce2ac04296ac97843e",
+    "train.csv": "6be7e9d14e76e64d1064479769ffd626080ed3a9e456f01464f276138ff3ff2b",
+    "val.csv": "ed67e373f5a0358342a2c8ebf491af913bd15f976f8f1a8e563d5a4ade14abea",
+    "test.csv": "508ef75c990d34733112d8b3b3cd79635064c396ef9c4749866d35b3aed6891e"
+  }
+}

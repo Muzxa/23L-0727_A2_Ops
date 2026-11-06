@@ -1,0 +1,9 @@
+{
+  "status": "verified",
+  "split_pixel_overlap": 0,
+  "retained_images": 972,
+  "applied_completed_trials": 8,
+  "saved_metrics_recomputed": true,
+  "local_and_colab_source_membership_identical": true,
+  "note": "Metrics recomputed from saved probabilities; models were not run on test again."
+}

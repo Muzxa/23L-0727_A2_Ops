@@ -1,0 +1,13 @@
+{
+  "total_files": 973,
+  "readable_files": 973,
+  "corrupt_files": 0,
+  "exact_duplicate_extra_files": 1,
+  "exact_duplicate_groups": 1,
+  "decoded_pixel_duplicate_extra_files": 1,
+  "skipped_nonimage_files": [],
+  "label_mapping": {
+    "real": 0,
+    "ai": 1
+  }
+}

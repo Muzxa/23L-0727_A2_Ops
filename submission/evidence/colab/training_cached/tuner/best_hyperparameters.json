@@ -1,0 +1,5 @@
+{
+  "dropout": 0.2,
+  "unfrozen_layers": 2,
+  "learning_rate": 0.0001
+}

@@ -1,0 +1,67 @@
+$ git init -b main
+Initialized empty Git repository in /Users/muzzammilshahid/Desktop/mlops_a2/.git/
+$ git config user.name Hayyan Haider
+$ git config user.email 23L-0727@users.noreply.github.com
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc init
+Initialized DVC repository.
+
+You can now commit the changes to git.
+
+What's next?
+------------
+- Check out the documentation: <https://dvc.org/doc>
+- Get help and share ideas: <https://dvc.org/chat>
+- Star us on GitHub: <https://github.com/treeverse/dvc>
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc config --local core.site_cache_dir /Users/muzzammilshahid/Desktop/mlops_a2/outputs/dvc-site-cache
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc add data/raw data/processed data/splits
+
+To track the changes with git, run:
+
+	git add data/splits.dvc data/raw.dvc data/processed.dvc
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+$ git add data/raw.dvc data/processed.dvc data/splits.dvc data/.gitignore
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc remote add -d storage /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/versioned_storage/dvc_remote
+Setting 'storage' as a default remote.
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc push
+1954 files pushed
+$ /Users/muzzammilshahid/Desktop/mlops_a2/.venv/bin/python -m dvc status -c
+Cache and remote 'storage' are in sync.
+$ git add .gitignore .dvc .dvcignore data/raw.dvc data/processed.dvc data/splits.dvc data/.gitignore visionguard scripts docs requirements.txt README.md
+$ git commit -m Task 1: version original and processed dataset plus audited split lists
+[main (root-commit) d652ee2] Task 1: version original and processed dataset plus audited split lists
+ 26 files changed, 1510 insertions(+)
+ create mode 100644 .dvc/.gitignore
+ create mode 100644 .dvc/config
+ create mode 100644 .dvcignore
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 data/.gitignore
+ create mode 100644 data/processed.dvc
+ create mode 100644 data/raw.dvc
+ create mode 100644 data/splits.dvc
+ create mode 100644 docs/DVC_GUIDE.md
+ create mode 100644 docs/LOCAL_SETUP.md
+ create mode 100644 docs/REPORT_WORKSHEET.md
+ create mode 100644 docs/VERIFICATION.md
+ create mode 100644 requirements.txt
+ create mode 100644 scripts/__init__.py
+ create mode 100644 scripts/build_notebook.py
+ create mode 100644 scripts/drop_invalid_pngs.py
+ create mode 100644 scripts/dvc_demo.py
+ create mode 100644 scripts/repair_processed.py
+ create mode 100644 scripts/run_training.py
+ create mode 100644 scripts/version_dataset.py
+ create mode 100644 visionguard/__init__.py
+ create mode 100644 visionguard/data.py
+ create mode 100644 visionguard/evaluation.py
+ create mode 100644 visionguard/training.py
+ create mode 100644 visionguard/tuning.py
+$ git clone --bare /Users/muzzammilshahid/Desktop/mlops_a2 /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/versioned_storage/git_backup.git
+Cloning into bare repository '/Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/versioned_storage/git_backup.git'...
+done.
+$ git rev-parse HEAD
+d652ee27ef218cc71e081cf8ea4ecd051fc71b9c
+DVC dataset push and persistent Git backup complete. Publish commits to DagsHub per DVC_GUIDE.md.

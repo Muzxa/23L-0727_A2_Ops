@@ -17,3 +17,5 @@ dvc_remote/
 .ipynb_checkpoints/
 .venv-tf/
 visionguard_tasks_1_2.zip
+
+.DS_Store

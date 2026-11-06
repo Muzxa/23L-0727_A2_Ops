@@ -1,0 +1,83 @@
+test_assignment_dataset_nested_folders (test_data.DataTests.test_assignment_dataset_nested_folders) ... ok
+test_audit_dedup_conflict_and_disjoint_splits (test_data.DataTests.test_audit_dedup_conflict_and_disjoint_splits) ... ok
+test_threshold_matches_exhaustive_weighted_cost (test_data.DataTests.test_threshold_matches_exhaustive_weighted_cost) ... ok
+test_truncated_png_repaired_losslessly_without_split_change (test_png_repair.RepairTests.test_truncated_png_repaired_losslessly_without_split_change) ... WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1793974540.786487 33954557 local_rendezvous.cc:412] Local rendezvous is aborting with status: INVALID_ARGUMENT: Unknown image file format. One of JPEG, JPEG XL, PNG, GIF, BMP, WebP required.
+            files  readable
+class_name                 
+ai             32        31
+real           31        31
+           width              height              size_bytes              
+             min median   max    min median   max        min  median   max
+class_name                                                                
+ai          30.0   30.0  30.0   20.0   34.0  49.0       1888  3162.0  4527
+real        30.0   30.0  30.0   20.0   34.0  49.0       1888  3162.0  4527
+{
+  "total_files": 63,
+  "readable_files": 62,
+  "corrupt_files": 1,
+  "exact_duplicate_extra_files": 2,
+  "exact_duplicate_groups": 2,
+  "decoded_pixel_duplicate_extra_files": 2,
+  "skipped_nonimage_files": [],
+  "label_mapping": {
+    "real": 0,
+    "ai": 1
+  }
+}
+{
+  "seed": 42,
+  "proportions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "splits": [
+    {
+      "split": "train",
+      "files": 41,
+      "real": 21,
+      "ai": 20
+    },
+    {
+      "split": "val",
+      "files": 9,
+      "real": 4,
+      "ai": 5
+    },
+    {
+      "split": "test",
+      "files": 9,
+      "real": 5,
+      "ai": 4
+    }
+  ],
+  "excluded_label_conflicts": 2,
+  "retained_images": 59,
+  "duplicates_removed": 1,
+  "original_split_policy": "Repartition globally after deduplication; do not mix with published-split results.",
+  "limits": "Exact decoded-pixel deduplication only; near duplicates and shared sources may remain."
+}
+Repairing train: /var/folders/4n/jzlj5kns0r96d6x3jhdtg8hh0000gn/T/tmpgb7b5goh/processed/train.png
+Reason: {{function_node __wrapped__DecodePng_device_/job:localhost/replica:0/task:0/device:CPU:0}} Unknown image file format. One of JPEG, JPEG XL, PNG, GIF, BMP, WebP required. [Op:DecodePng] name: 
+W0000 00:00:1793974540.791972 33954557 local_rendezvous.cc:412] Local rendezvous is aborting with status: INVALID_ARGUMENT: Unknown image file format. One of JPEG, JPEG XL, PNG, GIF, BMP, WebP required.
+Repairing val: /var/folders/4n/jzlj5kns0r96d6x3jhdtg8hh0000gn/T/tmpgb7b5goh/processed/val.png
+Reason: {{function_node __wrapped__DecodePng_device_/job:localhost/replica:0/task:0/device:CPU:0}} Unknown image file format. One of JPEG, JPEG XL, PNG, GIF, BMP, WebP required. [Op:DecodePng] name: 
+Repairing test: /var/folders/4n/jzlj5kns0r96d6x3jhdtg8hh0000gn/T/tmpgb7b5goh/processed/test.png
+Reason: {{function_node __wrapped__DecodePng_device_/job:localhost/replica:0/task:0/device:CPU:0}} Unknown image file format. One of JPEG, JPEG XL, PNG, GIF, BMP, WebP required. [Op:DecodePng] name: 
+{
+  "checked": 3,
+  "repaired": 3,
+  "status": "all split images TensorFlow-decodable and pixel hashes verified"
+}
+{
+  "checked": 3,
+  "repaired": 0,
+  "status": "all split images TensorFlow-decodable and pixel hashes verified"
+}
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.877s
+
+OK

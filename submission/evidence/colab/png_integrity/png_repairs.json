@@ -1,0 +1,7 @@
+[
+  {
+    "split": "train",
+    "path": "real/095daa106331ef878096fd1c8a8fd396cdfb11ec302139e4f0cfe6fa93ca0f7f.png",
+    "reason": "{{function_node __wrapped__DecodePng_device_/job:localhost/replica:0/task:0/device:CPU:0}} Invalid PNG data, size 10487713 [Op:DecodePng] name: "
+  }
+]

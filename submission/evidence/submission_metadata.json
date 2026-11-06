@@ -1,0 +1,8 @@
+{
+  "name": "Hayyan Haider",
+  "github": "https://github.com/Muzxa/23L-0727_A2_Ops",
+  "dagshub": "https://dagshub.com/Muzxa/23L-0727_A2_Ops",
+  "commit": "",
+  "sample_interpretation": "The real-labeled sample includes a portrait, a cheetah photograph, paintings, a magazine cover, and fantasy artwork; the AI sample includes stylized faces, abstract patterns, and a fluffy animal. This visible overlap means the problem is not simply photograph versus illustration, and the fantasy artwork in the real folder raises a label-provenance concern without proving mislabeling. Folder labels are retained as instructed; a small sample cannot establish authenticity or representativeness, and a separate label review would be needed.",
+  "evaluation_interpretation": "The tuned transfer model is the preferred model from pre-test validation loss (0.47383 versus 0.49179 for last-block fine-tuning and 0.53795 for the frozen head). The held-out comparison also favors transfer: F1 is 0.7075 versus 0.2449 and ROC-AUC is 0.8377 versus 0.6672. However, it makes more false accusations (15 versus 6), so this preference is not a claim that every error type improves. The scratch threshold is conservative and misses 68 of 80 AI images; its training/validation gap and weak validation discrimination limit its usefulness. Test weighted cost is 58 for transfer versus 80 for scratch under the declared 2:1 rule; these are retrospective comparisons, and no further tuning followed them."
+}

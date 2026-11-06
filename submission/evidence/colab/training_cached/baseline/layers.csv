@@ -1,0 +1,24 @@
+layer,type,output_shape,parameters,trainable
+rgb_pixels_0_255,InputLayer,"(None, 224, 224, 3)",0,True
+train_only_augmentation,Sequential,"(None, 224, 224, 3)",0,True
+train_only_augmentation/random_flip_1,RandomFlip,"(None, 224, 224, 3)",0,True
+train_only_augmentation/random_rotation_1,RandomRotation,"(None, 224, 224, 3)",0,True
+train_only_augmentation/random_zoom_1,RandomZoom,"(None, 224, 224, 3)",0,True
+train_only_augmentation/random_contrast_1,RandomContrast,"(None, 224, 224, 3)",0,True
+scale_0_1,Rescaling,"(None, 224, 224, 3)",0,True
+conv_1,Conv2D,"(None, 224, 224, 32)",864,True
+bn_1,BatchNormalization,"(None, 224, 224, 32)",128,True
+relu_1,Activation,"(None, 224, 224, 32)",0,True
+pool_1,MaxPooling2D,"(None, 112, 112, 32)",0,True
+conv_2,Conv2D,"(None, 112, 112, 64)",18432,True
+bn_2,BatchNormalization,"(None, 112, 112, 64)",256,True
+relu_2,Activation,"(None, 112, 112, 64)",0,True
+pool_2,MaxPooling2D,"(None, 56, 56, 64)",0,True
+conv_3,Conv2D,"(None, 56, 56, 128)",73728,True
+bn_3,BatchNormalization,"(None, 56, 56, 128)",512,True
+relu_3,Activation,"(None, 56, 56, 128)",0,True
+pool_3,MaxPooling2D,"(None, 28, 28, 128)",0,True
+global_average_pooling2d,GlobalAveragePooling2D,"(None, 128)",0,True
+dense,Dense,"(None, 64)",8256,True
+dropout,Dropout,"(None, 64)",0,True
+p_ai,Dense,"(None, 1)",65,True

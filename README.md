@@ -19,11 +19,29 @@ The notebook downloads the assignment's Kaggle dataset, audits it, produces EDA,
 - `docs/LOCAL_SETUP.md`: isolated Python setup and CLI commands.
 - `tests/test_data.py`: synthetic-fixture checks for corruption, leakage and threshold optimization.
 
-## What still requires your execution
+## Completed Tasks 1 and 2 - 6 November 2026
 
-No original dataset, trained weights or user credentials were provided. Therefore **no dataset statistics, accuracy scores, training screenshots or DagsHub links are claimed**. Run the notebook on your data/GPU, verify folder labels, create your named GitHub/DagsHub projects, run dataset DVC versioning, push commits, capture genuine screenshots, interpret EDA, and fill the ten-error observation worksheet. The optional Grad-CAM bonus and Tasks 3–8 are not included. The assignment's overview asks for MLflow tracking of every experiment; this Tasks 1–2 package saves local evidence but does not implement Task 3's MLflow instrumentation. If your instructor expects remote tracking during the initial training, add it before your graded run rather than claiming it afterward.
+The full assignment dataset was audited and the actual experiment ran on Colab's Tesla T4 (Python 3.13.16, TensorFlow 2.21.0, Keras 3.13.2). There are 973 readable original images (538 AI, 435 real), zero unreadable candidates, and one duplicate removed. The disjoint stratified splits contain 680 train, 146 validation, and 146 test images. One incompatible processed PNG was repaired losslessly and all 972 retained pixel hashes were verified.
 
-A final report cannot honestly be completed before the dataset and training results exist. Use the worksheet to assemble your report after execution. Check any instructor-specific page limit.
+| Final model | Accuracy | Precision | Recall | F1 | ROC-AUC | Validation threshold |
+|---|---:|---:|---:|---:|---:|---:|
+| Scratch CNN | 0.4932 | 0.6667 | 0.1500 | 0.2449 | 0.6672 | 0.651028 |
+| Tuned MobileNetV2 | 0.7055 | 0.7761 | 0.6500 | 0.7075 | 0.8377 | 0.680687 |
+
+Eight Fashion-MNIST toy trials and eight applied trials completed. The applied winner used LR 0.0001, dropout 0.2, and two unfrozen weighted layers. Validation loss chose the tuned transfer model before test access. Each final model made one held-out inference pass; all figures and metrics reuse the saved predictions. Ten errors per model have image-specific observations and hypotheses in the evidence bundle.
+
+- GitHub: https://github.com/Muzxa/23L-0727_A2_Ops
+- DagsHub: https://dagshub.com/Muzxa/23L-0727_A2_Ops
+- DVC toy commits: the `dvc-toy` branch on both platforms.
+- Report: `submission/23L-0727_VisionGuard.pdf`.
+- Local full evidence: `outputs/23L-0727_A2_Ops/colab/`.
+- Local DVC object storage: `outputs/23L-0727_A2_Ops/versioned_storage/dvc_remote/`.
+
+The DVC storage is a real local remote, an option permitted by Task 1.4. Data bytes are not uploaded to DagsHub Storage; DagsHub mirrors the Git source, pointers, and toy commits. A new machine needs the local remote or must recreate the dataset from Kaggle. The original dataset has artwork in its real folder, so labels must not be presented as verified photographic authenticity. Near-duplicate and common-source leakage remain limitations.
+
+Google Drive quota prevented notebook saves. The completed run used runtime-local outputs, which were downloaded and verified locally. Deterministic resized inputs are cached before per-epoch shuffling to avoid repeated full-resolution decoding. Augmentation remains inside the model and is never cached.
+
+Tasks 3-8, cloud/API deployment, remote MLflow tracking, and the optional Grad-CAM bonus are outside this Tasks 1-2 submission. Saved local experiments are not claimed as MLflow runs.
 
 ## Design choices
 
@@ -41,4 +59,4 @@ The saved test guard blocks a second final evaluation in the same run directory.
 - [DVC remote storage](https://dvc.org/doc/user-guide/data-management/remote-storage)
 - [DagsHub DVC integration](https://dagshub.com/docs/integration_guide/dvc/)
 
-AI-assistance disclosure suggestion: “I used OpenAI Codex to prepare the audit, data pipeline, training/evaluation scripts, Colab notebook and report checklist. I ran the experiments, inspected the outputs, and wrote/verified the reported interpretations.” Adjust this to describe what you actually did.
+AI-assistance disclosure: “OpenAI Codex helped prepare and repair the code, operated the Colab experiment, inspected outputs, and drafted the report. I am responsible for reviewing and understanding the submitted work.”

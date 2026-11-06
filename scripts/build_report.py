@@ -22,7 +22,7 @@ styles.add(ParagraphStyle(name='BodyVG',fontName='Helvetica',fontSize=9.5,leadin
 styles.add(ParagraphStyle(name='CaptionVG',fontSize=8,leading=10,spaceBefore=4,spaceAfter=10,textColor=colors.HexColor('#546378')))
 styles.add(ParagraphStyle(name='TitleVG',fontName='Helvetica-Bold',fontSize=30,leading=35,spaceAfter=18,textColor=colors.HexColor('#122d4d')))
 styles.add(ParagraphStyle(name='HVG',fontName='Helvetica-Bold',fontSize=17,leading=21,spaceBefore=5,spaceAfter=12,textColor=colors.HexColor('#122d4d')))
-styles.add(ParagraphStyle(name='SmallVG',fontSize=7.5,leading=10,spaceAfter=5))
+styles.add(ParagraphStyle(name='SmallVG',fontName='Helvetica',fontSize=7.5,leading=10,spaceAfter=5))
 story=[]
 fig=0
 
@@ -105,7 +105,7 @@ def build():
     toy=js(E/'dvc_toy/result.json')
     table([['Toy evidence','Observed value'],['Version 1 commit',toy['first_commit']],['Version 2 commit',toy['second_commit']],['Restored version',toy['restored_commit']],['Recovery assertion',str(toy['verified'])]],[112,381],True)
     para('git checkout selected the first commit and dvc checkout restored its two-row content. The toy CSV and its local DVC cache were then removed. dvc pull recovered the older bytes from the remote, and the script asserted exact content equality. Deleting the cache makes this stronger than recovering from a local cached copy.')
-    shot('dvc_toy.png','Actual toy Git commits and verified remote recovery.',350)
+    shot('dvc_toy.png','Both toy Git commits published on the DagsHub dvc-toy branch. Recovery is verified in the accompanying transcript and result.json.',350)
     para('git init starts metadata history; dvc init creates DVC configuration; dvc add hashes data and writes pointers; dvc remote add chooses object storage; dvc push uploads objects; dvc pull retrieves the objects named by the checked-out pointer. The two toy commits are also published to the DagsHub project as described in the accompanying repository evidence.')
 
     page('1.4 - Apply DVC to the real dataset')
@@ -113,7 +113,8 @@ def build():
     pointer=(ROOT/'data/raw.dvc').read_text()
     para('<b>Actual raw pointer:</b><br/>'+escape(pointer).replace('\n','<br/>'),'SmallVG')
     para('The pointer contains the content checksum, byte size, file count, hash algorithm, and path. For a directory, its .dir object identifies the file manifest. The audit uses SHA-256 for source identity; DVC\'s content checksum serves its own storage protocol. Large images remain outside Git because binary versions inflate history and do not produce useful text diffs.')
-    shot('dvc_dataset.png','Actual dataset DVC push/status and tracked pointer evidence.',300)
+    para('The raw DVC pointer counts 975 files, while the image audit counts 973 candidates: DVC also includes two hidden .DS_Store files ignored by the image audit. This difference does not indicate two unreadable images.')
+    shot('dvc_dataset.png','Browser view of the actual saved raw pointer and freshly executed DVC remote status. The log file is included in the evidence bundle.',300)
     shot('dagshub.png','DagsHub repository and published version history.',240)
     para('The local remote satisfies the permitted storage option. Reproducing on another computer requires access to that remote or an exported copy and an updated remote path; a Git clone alone cannot reconstruct excluded image bytes.')
 
@@ -139,11 +140,13 @@ def build():
         image(T/stage/'curves.png',f'{stage}: loss and accuracy curves, with minimum validation-loss epoch marked.',190)
         names=js(T/stage/'trainable_layers.json')
         para('<b>'+stage+' trainable weighted layers:</b> '+', '.join(names),'SmallVG')
+    para('The best validation loss fell from 0.53795 for the frozen head to 0.49179 after last-block adaptation. This supports useful adaptation on this validation split, while the later tuner winner achieved 0.47383. The frozen-head best epoch was the budget limit (10), so early stopping did not establish convergence for that stage.')
 
     page('2.4 - Training discipline and checkpoints')
     para('Python, NumPy, and TensorFlow seeds are fixed to 42, and TensorFlow deterministic operations are enabled. Exact reproducibility still depends on hardware, CUDA, and package versions. A checkpoint is saved only when validation loss improves. Early stopping uses patience 4 and restores best weights; ReduceLROnPlateau halves the learning rate after 2 stagnant epochs with minimum 1e-7.')
     table([['Stage','Epoch budget','Epochs run','Best epoch','Best validation loss']]+[[stage,budget,js(T/stage/'best_epoch.json')['epochs_run'],js(T/stage/'best_epoch.json')['best_epoch'],f"{js(T/stage/'best_epoch.json')['best_val_loss']:.5f}"] for stage,budget in [('baseline',20),('head',10),('finetune',15)]],[90,85,85,85,148])
     image(T/'baseline/curves.png','Scratch CNN training curves, with the selected validation-loss checkpoint marked.',205)
+    para('Scratch training loss generally decreases, while validation loss improves only to epoch 6 and worsens later. Training accuracy rises above validation accuracy, which stays near the class-majority level. This gap is consistent with overfitting or dataset mismatch; the curves alone cannot identify its cause.')
     para('The transfer candidates (frozen head, last block, and tuner winner) were compared by validation loss before test access. The selected candidate was <b>'+selection['transfer_candidate']+'</b>. Thresholds and split hashes were saved in selection_before_test.json, then an exclusive test-start marker prevented a second final evaluation in this run directory.')
     shot('training_complete.png','Actual completed experiment evidence and stage results.',240)
 
@@ -173,7 +176,7 @@ def build():
         errs=rows(T/f'evaluation/{m}/error_analysis.csv')
         assert all(r['visual_observation'] and r['hypothesis_to_verify'] for r in errs)
         table([['Image','Visible observation','Hypothesis and check']]+[[i+1,r['visual_observation'],r['hypothesis_to_verify']] for i,r in enumerate(errs)],[36,204,253],True)
-        para('Images are numbered left-to-right, top-to-bottom. These are visual observations and testable hypotheses, not proven causes. The hypotheses suggest future diagnostics on separate data; they were not used to retune this model or threshold.')
+        para('Images are numbered left-to-right, top-to-bottom. Sorted paths place AI images first, so these first ten available errors are all false negatives; the confusion matrices cover both error types. These are visual observations and testable hypotheses, not proven causes. Proposed diagnostics were not used to retune the model or threshold.')
 
     page('2.7 - Keras Tuner: Fashion-MNIST toy')
     para('The toy uses a tiny flattened Fashion-MNIST classifier with one hidden ReLU layer and a 10-class softmax. A fixed stratified subset of 10,000 training and 2,000 validation images is taken from the built-in training partition; its test partition remains unused. Pixels are scaled to [0,1], with sparse categorical cross entropy for integer class labels.')
@@ -195,6 +198,7 @@ def build():
     winner=max(ranges,key=ranges.get)
     table([['Parameter','Range of marginal mean validation losses']]+[[k,f'{v:.6f}'] for k,v in ranges.items()],[180,313])
     para('<b>'+winner+'</b> has the widest observed marginal mean-loss range, and thus the strongest exploratory association in these trials. This is not causal importance: multiple settings change together, each value has few observations, and optimization is stochastic. A controlled one-factor comparison would be needed to isolate effects.')
+    para('The marginal mean validation loss was 0.52172 at 1e-5 (2 trials), 0.51140 at 3e-5 (3), and 0.48805 at 1e-4 (3). Larger updates may have adapted the pretrained final layers faster within the short five-epoch budget. This is a hypothesis about the observed association, not proof that 1e-4 is universally best.')
     para('Choosing the minimum of many validation scores can select random favorable noise and overfit the validation split. The test set is consequently opened only after candidate and threshold selection. Further model changes after this report would require a fresh held-out set for an unbiased final check.')
     shot('tuner_applied.png','Eight completed applied trials and winning settings.',240)
 

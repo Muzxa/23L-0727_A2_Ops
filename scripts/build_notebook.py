@@ -23,13 +23,13 @@ Replace your roll number below. Use the same `<RollNumber>_A2_Ops` name on GitHu
 This notebook creates actual evidence when run. It contains no claimed dataset statistics or model scores in advance.
 Full eight-trial tuning is required; do not report a shortened smoke test as final results.
 The optional Grad-CAM bonus is outside this notebook's required scope.''')
-code('''ROLL_NUMBER = "REPLACE_WITH_YOUR_ROLL_NUMBER"
+code('''ROLL_NUMBER = "23L-0727"
 assert ROLL_NUMBER != "REPLACE_WITH_YOUR_ROLL_NUMBER", "Enter your roll number first"
 PROJECT_NAME = f"{ROLL_NUMBER}_A2_Ops"
 SEED = 42
 from pathlib import Path
 import os
-USE_GOOGLE_DRIVE = True  # Set False to skip mounting and use this runtime's disk.
+USE_GOOGLE_DRIVE = False  # Drive was full during the submitted run; download local evidence.
 DRIVE_MOUNTED = False
 if USE_GOOGLE_DRIVE:
     try:
