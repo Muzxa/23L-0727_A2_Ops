@@ -1,0 +1,4 @@
+[core]
+    remote = local
+['remote "local"']
+    url = /Users/muzzammilshahid/Desktop/mlops_a2/outputs/23L-0727_A2_Ops/dvc_toy/remote

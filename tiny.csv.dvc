@@ -1,0 +1,5 @@
+outs:
+- md5: b9f92952b27938458fca4352ec6b3e70
+  size: 21
+  hash: md5
+  path: tiny.csv
