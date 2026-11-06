@@ -118,8 +118,8 @@ def build():
     para('The raw DVC pointer counts 975 files, while the image audit counts 973 candidates: DVC also includes two hidden .DS_Store files ignored by the image audit. This difference does not indicate two unreadable images.')
     shot('dvc_dataset.png','Browser view of the actual saved raw pointer and freshly executed DVC remote status. The log file is included in the evidence bundle.',300)
     page('1.4 - Published project and version history')
-    para('Screenshots are cropped browser captures that preserve the displayed evidence and project context while excluding the software cursor overlay. No reported values were edited. The GitHub project is mirrored to DagsHub under the required roll-number project name. The dvc-toy branch preserves both CSV versions, while main contains the audited dataset pointers and model development source. Figure '+str(fig+1)+' shows the published project; large data objects remain in the permitted local DVC remote.')
-    shot('dagshub.png','DagsHub project and source version evidence.',355)
+    para('Screenshots are cropped browser captures. The DagsHub excerpts omit the browser address bar and account header; the displayed repository records and results are unchanged. The software cursor overlay is excluded. The GitHub project is mirrored to DagsHub under the required roll-number project name. The dvc-toy branch preserves both CSV versions, while main contains the audited dataset pointers and model development source. Figure '+str(fig+1)+' shows the published project; large data objects remain in the permitted local DVC remote.')
+    shot('dagshub.png','DagsHub repository excerpt: branch, source commit, and tracked files; account header cropped.',355)
     para('The local remote satisfies the permitted storage option. Reproducing on another computer requires access to that remote or an exported copy and an updated remote path; a Git clone alone cannot reconstruct excluded image bytes.')
 
     page('Task 2 - Model Development with TensorFlow/Keras')
